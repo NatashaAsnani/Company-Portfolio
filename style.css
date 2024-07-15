@@ -1171,20 +1171,24 @@ form{
     }
     .textbox{
         left: 95px;
-        bottom: 5530px;
+        margin-top: -1220px;
+        /* bottom: 5530px; */
     }
 
     .textbox1{
         left: 95px;
-        bottom: 5120px;
+        /* top: 4000px; */
+        margin-top: -880px;
     }
     .textbox2{
         left: 95px;
-        bottom: 4710px;
+        /* bottom: 4710px; */
+        margin-top: -540px;
     }
     .textbox3{
         left: 100px;
-        bottom: 4300px;
+        /* bottom: 4300px; */
+        margin-top: -200px;
     }
     .per{
         margin-top: 150px;
