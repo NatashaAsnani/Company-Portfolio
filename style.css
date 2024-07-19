@@ -316,6 +316,8 @@
 }
 .projects1{
     margin-top: 100px;
+    display: flex;
+    flex-wrap: wrap;
 }
 .buttons{
     margin-top: 50px;
@@ -324,13 +326,17 @@
 
 .projects2{
     margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
 }
 .pro1 {
     position: relative;
     border: none;
     outline: none;
 }
-   
+.image-container {
+    position: relative;
+}   
 .headphone {
     width: 390px;
     height: 215px;
@@ -599,6 +605,8 @@
 
 .projects3{
     margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
 }
 .pro7{
     position: relative;
@@ -731,7 +739,7 @@
     margin-top: -150px;
 }
 
-  .pro1:hover, .pro2:hover, .pro3:hover, .pro4:hover, .pro5:hover, .pro6:hover, .pro7:hover, .pro8:hover, .pro9:hover{
+.pro1:hover, .pro2:hover, .pro3:hover, .pro4:hover, .pro5:hover, .pro6:hover, .pro7:hover, .pro8:hover, .pro9:hover{
     background: none;
     border: none;
   }
@@ -742,11 +750,9 @@
     text-align: center;
     display: none; 
   }
-  
 .show {
     display: inline-block;
   }
-  
   .heading2{
     color: #237390;
   }
@@ -2031,13 +2037,13 @@ form{
         padding-left: 480px;
     }
     .textbox1{
-        left: 375px;
+        left: 370px;
     }
     .textbox2{
-        left: 680px;
+        left: 660px;
     }
     .textbox3{
-        left: 1000px;
+        left: 965px;
     }
     .map{
         left: 250px;
