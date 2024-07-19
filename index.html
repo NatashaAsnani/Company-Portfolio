@@ -55,574 +55,607 @@
 
 
 <script>
-  document.addEventListener('DOMContentLoaded', function() {
-    const filterButtons = document.querySelectorAll('.filter-button');
-    const projects1 = document.querySelectorAll('.projects1 .col');
-    const projects2 = document.querySelectorAll('.projects2 .col');
+   // Function to filter elements based on the category
+  function filterSelection(c) {
+    var x, i;
+    x = document.getElementsByClassName("filterDiv");
+    if (c == "all") c = "";
+    // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
+    for (i = 0; i < x.length; i++) {
+      w3RemoveClass(x[i], "show");
+      if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+    }
+  }
 
-    filterButtons.forEach(button => {
-      button.addEventListener('click', () => {
-        const filter = button.getAttribute('data-filter');
+  // Function to add a class to an element
+  function w3AddClass(element, name) {
+    var i, arr1, arr2;
+    arr1 = element.className.split(" ");
+    arr2 = name.split(" ");
+    for (i = 0; i < arr2.length; i++) {
+      if (arr1.indexOf(arr2[i]) == -1) {
+        element.className += " " + arr2[i];
+      }
+    }
+  }
 
-        if (filter === 'all') {
-          projects1.forEach(project => project.classList.add('show'));
-          projects2.forEach(project => project.classList.add('show'));
-        } else {
-          projects1.forEach(project => {
-            project.classList.remove('show');
-            if (project.classList.contains(filter)) {
-              project.classList.add('show');
-            }
-          });
-          projects2.forEach(project => {
-            project.classList.remove('show');
-            if (project.classList.contains(filter)) {
-              project.classList.add('show');
-            }
-          });
+  // Function to remove a class from an element
+  function w3RemoveClass(element, name) {
+    var i, arr1, arr2;
+    arr1 = element.className.split(" ");
+    arr2 = name.split(" ");
+    for (i = 0; i < arr2.length; i++) {
+      while (arr1.indexOf(arr2[i]) > -1) {
+        arr1.splice(arr1.indexOf(arr2[i]), 1);
+      }
+    }
+    element.className = arr1.join(" ");
+  }
+
+  // Function to handle button click events
+  function setupButtons() {
+    var btnContainer = document.getElementById("myBtnContainer");
+    var btns = btnContainer.getElementsByClassName("btn");
+    for (var i = 0; i < btns.length; i++) {
+      btns[i].addEventListener("click", function() {
+        var current = document.getElementsByClassName("active");
+        if (current.length > 0) {
+          current[0].className = current[0].className.replace(" active", "");
         }
+        this.className += " active";
       });
-    });
+    }
+  }
 
-    // Initially show all projects
-    document.querySelector('.filter-button.all').click();
-  });
+  // Show all projects initially
+  window.onload = function() {
+    filterSelection("all");
+    setupButtons();
+  };
 </script>
-    <div class="container-fluid">
+
+  <div class="container-fluid">
+      <div class="row">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#"> <img src="logo.png" alt="" class="mamba"> </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ms-auto mb-2 mb-lg-0 ">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">About</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Services</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Portfolio</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Team</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Dropdown
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Contact</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+      <div class="row">
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="caro1.jpeg" class="d-block w-100" alt="...">
+              <div class="centered">
+                  <h1>Welcome to our website!</h1>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque rem perspiciatis illo praesentium? Ipsam illum dolor labore vitae at soluta laudantium saepe, esse nulla dolores dolorum fugiat doloremque corrupti. Alias.</p>
+                  <button class="read">Read More</button>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="caro2.jpg" class="d-block w-100" alt="...">
+              <div class="centered">
+                  <h1> <strong> Welcome to our website! </strong></h1>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque rem perspiciatis illo praesentium? Ipsam illum dolor labore vitae at soluta laudantium saepe, esse nulla dolores dolorum fugiat doloremque corrupti. Alias.</p>
+                  <button class="read">Read More</button>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="caro3.png" class="d-block w-100" alt="...">
+              <div class="centered">
+                  <h1>Welcome to our website!</h1>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque rem perspiciatis illo praesentium? Ipsam illum dolor labore vitae at soluta laudantium saepe, esse nulla dolores dolorum fugiat doloremque corrupti. Alias.</p>
+                  <button class="read">Read More</button>
+              </div>
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="row aboutus">
+          <div class="col video">
+              <iframe width="560" height="415" src="https://www.youtube.com/embed/jQyDlvv621Y?si=Wjjq7L65u6D2lVl4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+          <div class="col about">
+              <h1>About Us</h1>
+              <p class="lobout">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui voluptate similique iure obcaecati alias excepturi tempora explicabo, labore provident consequuntur a veritatis officia vitae saepe illo blanditiis dolor. Blanditiis, delectus.</p>
+              <i class="fa fa-fingerprint bulb"></i> 
+              <div class="span1">
+                  <h3>Lorem</h3>
+                  <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui voluptate similique iure obcaecati alias excepturi tempora explicabo.</p>
+              </div>
+              <i class="fa fa-gift gift"></i>
+              <div class="span2">
+                  <h3>Lorem</h3>
+                  <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.  Qui voluptate similique iure obcaecati alias excepturi tempora explicabo.</p>
+              </div>
+          </div>
+      </div>
+
+      <div class="row cellsrow cells">
+          <div class="cell1">
+              <p class="num">01</p>
+              <h3 class="head">Lorem Ipsum</h3>
+              <p class="para text-muted">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam eius unde exercitationem fugiat similique debitis!</p>
+          </div>
+          <div class="cell1">
+              <p class="num">02</p>
+              <h3 class="head">Lorem Ipsum</h3>
+              <p class="para text-muted">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam eius unde exercitationem fugiat similique debitis!</p>
+          </div>
+          <div class="cell1">
+              <p class="num">03</p>
+              <h3 class="head">Lorem Ipsum</h3>
+              <p class="para text-muted">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam eius unde exercitationem fugiat similique debitis!</p>
+          </div>
+      </div>
+      <div class="row cells">
+          <div class="cell2">
+              <p class="num">04</p>
+              <h3 class="head">Lorem Ipsum</h3>
+              <p class="para text-muted">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam eius unde exercitationem fugiat similique debitis!</p>
+          </div>
+          <div class="cell2">
+              <p class="num">05</p>
+              <h3 class="head">Lorem Ipsum</h3>
+              <p class="para text-muted">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam eius unde exercitationem fugiat similique debitis!</p>
+          </div>
+          <div class="cell2">
+              <p class="num">06</p>
+              <h3 class="head">Lorem Ipsum</h3>
+              <p class="para text-muted">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam eius unde exercitationem fugiat similique debitis!</p>
+          </div>
+      </div>
+
+      <div class="row counting">
+        <div class="col-md-3 counters">
+            <div class="timer" data-target="232">0</div>
+            <p class="clients">Happy Clients</p>
+        </div>
+        <div class="col-md-3 counters1">
+            <div class="timer" data-target="521">0</div>
+            <p class="clients1">Projects</p>
+        </div>
+        <div class="col-md-3 counters2">
+            <div class="timer" data-target="1463">0</div>
+            <p class="clients">Hours of Support</p>
+        </div>
+        <div class="col-md-3 counters3">
+            <div class="timer" data-target="100">0</div>
+            <p class="clients">Hard Workers</p>
+        </div>
+      </div>
+
+      <div class="row services">
+        <h1 class="text-center heading">Services</h1>
+        <div class="col-md-4 icons icons21">
+          <i class="far fa-comment-dots message1"></i>
+          <h5 class="lorem2">Lorem Ipsum</h5>
+          <span class="underline"></span>
+          <p class="para1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex rerum sapiente illum nam aspernatur quo, vero numquam.</p>
+        </div>
+        <div class="col-md-4 icons icons22">
+          <i class="fa fa-network-wired network"></i>
+          <h5 class="lorem1">Lorem Ipsum</h5>
+          <span class="underline1"></span>
+          <p class="para2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex rerum sapiente illum nam aspernatur quo, vero numquam.</p>
+        </div>
+        <div class="col-md-4 icons1 icons23">
+          <i class="fa fa-globe message"></i>
+          <h5 class="lorem">Lorem Ipsum</h5>
+          <span class="underline2"></span>
+          <p class="para3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex rerum sapiente illum nam aspernatur quo, vero numquam.</p>
+        </div>
+      </div>
+
+
+      <div class="row services">
+        <div class="col-md-4 icons icons24">
+          <i class="fa fa-tower-broadcast message1 message222"></i>
+          <h5 class="lorem2 lorem2222">Lorem Ipsum</h5>
+          <span class="underline"></span>
+          <p class="para1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex rerum sapiente illum nam aspernatur quo, vero numquam.</p>
+        </div>
+        <div class="col-md-4 icons icons25">
+          <i class="fa fa-network-wired network network222"></i>
+          <h5 class="lorem1 lorem222">Lorem Ipsum</h5>
+          <span class="underline1 underline222"></span>
+          <p class="para2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex rerum sapiente illum nam aspernatur quo, vero numquam.</p>
+        </div>
+        <div class="col-md-4 icons1 icons26">
+          <i class="fa fa-globe message message212"></i>
+          <h5 class="lorem lorem33">Lorem Ipsum</h5>
+          <span class="underline2 underline33"></span>
+          <p class="para3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex rerum sapiente illum nam aspernatur quo, vero numquam.</p>
+        </div>
+      </div>
+
+    <div class="row portfolio">
+      <h1 class="text-center heading1">Our Portfolio</h1>
+    </div>
+    <div class="row buttons" id="myBtnContainer">
+      <!-- <button class="filter-button all mx-2" data-filter="all">All</button>
+      <button class="filter-button app mx-2" data-filter="app">App</button>
+      <button class="filter-button cards mx-2" data-filter="card">Card</button>
+      <button class="filter-button web mx-2" data-filter="web">Web</button> -->
+
+      <button class="btn active all" onclick="filterSelection('all')"> All</button>
+      <button class="btn app" onclick="filterSelection('app')"> App</button>
+      <button class="btn cards" onclick="filterSelection('card')"> Card</button>
+      <button class="btn web" onclick="filterSelection('web')"> Web</button>
+    
+    </div>
+
+    <div class="row projects1">
+      <div class="filterDiv col pro1 app all">
+        <img src="headphone.png" alt="" class="headphone">
+        <div class="description">
+          <h6 class="text-white fw-bold desc1">App1</h6>
+          <span>APP</span>
+          <button class="styling"> <a href=""> <i class="fa fa-plus"></i> </a> </button>
+          <button class="styling1"> <a href=""> <i class="fa fa-link"></i>  </a> </button>
+        </div>
+      </div>
+      <div class="filterDiv col pro2 web all">
+        <img src="watch11.png" alt="" class="watch">
+        <div class="description1">
+          <h6 class="text-white fw-bold desc2">Web 3</h6>
+          <span>WEB</span>
+          <button class="styling"> <a href=""> <i class="fa fa-plus"></i> </a> </button>
+          <button class="styling1"> <a href=""> <i class="fa fa-link"></i>  </a> </button>
+        </div>
+      </div>
+      <div class="filterDiv col pro3 app all">
+        <img src="glasses.png" alt="" class="glasses">
+        <div class="description2">
+          <h6 class="text-white fw-bold desc3">App 2</h6>
+          <span>APP</span>
+          <button class="styling"> <a href=""> <i class="fa fa-plus"></i> </a> </button>
+          <button class="styling1"> <a href=""> <i class="fa fa-link"></i>  </a> </button>
+        </div>
+        
+      </div>
+    </div>
+
+    <div class="row projects2">
+      <div class="filterDiv col pro4 card all">
+        <img src="flower.png" alt="" class="flower">
+        <div class="description3">
+          <h6 class="text-white fw-bold desc4">Card 2</h6>
+          <span>CARD</span>
+          <button class="styling"> <a href=""> <i class="fa fa-plus"></i> </a> </button>
+          <button class="styling1"> <a href=""> <i class="fa fa-link"></i>  </a> </button>
+        </div>
+      </div>
+      <div class="filterDiv col pro5 web all">
+        <img src="perfume.jpg" alt="" class="perfume">
+        <div class="description4">
+          <h6 class="text-white fw-bold desc5">Web 2</h6>
+          <span>WEB</span>
+          <button class="styling"> <a href=""> <i class="fa fa-plus"></i> </a> </button>
+          <button class="styling1"> <a href=""> <i class="fa fa-link"></i>  </a> </button>
+        </div>
+      </div>
+      <div class="filterDiv col pro6 app all">
+        <img src="oil.png" alt="" class="oil">
+        <div class="description5">
+          <h6 class="text-white fw-bold desc6">App 3</h6>
+          <span>APP</span>
+          <button class="styling"> <a href=""> <i class="fa fa-plus"></i> </a> </button>
+          <button class="styling1"> <a href=""> <i class="fa fa-link"></i>  </a> </button>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="row projects3">
+      <div class=" filterDiv col pro7 card all">
+        <img src="water11.jpg" alt="" class="water">
+        <div class="description6">
+          <h6 class="text-white fw-bold desc7">Card 1</h6>
+          <span>CARD</span>
+          <button class="styling"> <a href=""> <i class="fa fa-plus"></i> </a> </button>
+          <button class="styling1"> <a href=""> <i class="fa fa-link"></i>  </a> </button>
+        </div>
+      </div>
+      <div class="filterDiv col pro8 card all">
+        <img src="chair.jpg" alt="" class="chair">
+        <div class="description7">
+          <h6 class="text-white fw-bold desc8">Card 3</h6>
+          <span>CARD</span>
+          <button class="styling"> <a href=""> <i class="fa fa-plus"></i> </a> </button>
+          <button class="styling1"> <a href=""> <i class="fa fa-link"></i>  </a> </button>
+        </div>
+      </div>
+      <div class="filterDiv col pro9 web all">
+        <img src="steak.jpg.png" alt="" class="steak">
+        <div class="description8">
+          <h6 class="text-white fw-bold desc9">Web 3</h6>
+          <span>WEB</span>
+          <button class="styling"> <a href=""> <i class="fa fa-plus"></i> </a> </button>
+          <button class="styling1"> <a href=""> <i class="fa fa-link"></i>  </a> </button>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="row team">
+      <h1 class="text-center heading2">Our Team</h1>
+      <p class="text-center">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae magni debit</p>
+      <div class="col per">
+        <img src="person1.jpg" alt="" class="person1">
+      </div>
+      <div class="col per">
+        <img src="person2.jpg" alt="" class="person2">
+      </div>
+      <div class="col per">
+        <img src="person3.jpg" alt="" class="person3">
+      </div>
+      <div class="col per">
+        <img src="person4.1.png" alt="" class="person4">
+      </div>
+    </div>
+
+    <div class="row boxes">
+      <div class="col-md-3 per1">
+        <div class="textbox">
+          <h5 class="text-center text-white">Walter White</h5>
+          <span class="underline11"></span>
+          <p class="text-center text-white">Chief Executive officer</p>
+          <div class="icon11">
+            <i class="fab fa-twitter twit"></i>
+            <i class="fab fa-facebook fb p-1"></i>
+            <i class="fab fa-instagram insta p-1"></i>
+            <i class="fab fa-linkedin in p-1"></i>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 per2">
+        <div class="textbox1">
+          <h5 class="text-center text-white">Walter White</h5>
+          <span class="underline11"></span>
+          <p class="text-center text-white">Chief Executive officer</p>
+          <div class="icon11">
+            <i class="fab fa-twitter twit"></i>
+            <i class="fab fa-facebook fb p-1"></i>
+            <i class="fab fa-instagram insta p-1"></i>
+            <i class="fab fa-linkedin in p-1"></i>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 per3">
+        <div class="textbox2">
+          <h5 class="text-center text-white">Walter White</h5>
+          <span class="underline11"></span>
+          <p class="text-center text-white">Chief Executive officer</p>
+          <div class="icon11">
+            <i class="fab fa-twitter twit"></i>
+            <i class="fab fa-facebook fb p-1"></i>
+            <i class="fab fa-instagram insta p-1"></i>
+            <i class="fab fa-linkedin in p-1"></i>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 per4">
+        <div class="textbox3">
+          <h5 class="text-center text-white">Walter White</h5>
+          <span class="underline11"></span>
+          <p class="text-center text-white">Chief Executive officer</p>
+          <div class="icon11">
+            <i class="fab fa-twitter twit"></i>
+            <i class="fab fa-facebook fb p-1"></i>
+            <i class="fab fa-instagram insta p-1"></i>
+            <i class="fab fa-linkedin in p-1"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <div class="row faq">
+      <h1 class="text-center heading3">Frequently Asked Questions</h1>
+
+
+      <div class="col frequent">
+        <h4>Lorem ipsum dolor sit amet consectetur?</h4>
+        <p class="text-muted">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto dolore incidunt error exercitationem natus atque dolor vero alias velit laudant.</p>
         <div class="row">
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <div class="container-fluid">
-                  <a class="navbar-brand" href="#"> <img src="logo.png" alt="" class="mamba"> </a>
-                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                  </button>
-                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 ">
-                      <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="#">About</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="#">Services</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="#">Portfolio</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="#">Team</a>
-                      </li>
-                      <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                          Dropdown
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                          <li><a class="dropdown-item" href="#">Action</a></li>
-                          <li><a class="dropdown-item" href="#">Another action</a></li>
-                          <li><hr class="dropdown-divider"></li>
-                          <li><a class="dropdown-item" href="#">Something else here</a></li>
-                        </ul>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="#">Contact</a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </nav>
-        </div>
-        <div class="row">
-            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-indicators">
-                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                </div>
-                <div class="carousel-inner">
-                  <div class="carousel-item active">
-                    <img src="caro1.jpeg" class="d-block w-100" alt="...">
-                    <div class="centered">
-                        <h1>Welcome to our website!</h1>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque rem perspiciatis illo praesentium? Ipsam illum dolor labore vitae at soluta laudantium saepe, esse nulla dolores dolorum fugiat doloremque corrupti. Alias.</p>
-                        <button class="read">Read More</button>
-                    </div>
-                  </div>
-                  <div class="carousel-item">
-                    <img src="caro2.jpg" class="d-block w-100" alt="...">
-                    <div class="centered">
-                        <h1> <strong> Welcome to our website! </strong></h1>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque rem perspiciatis illo praesentium? Ipsam illum dolor labore vitae at soluta laudantium saepe, esse nulla dolores dolorum fugiat doloremque corrupti. Alias.</p>
-                        <button class="read">Read More</button>
-                    </div>
-                  </div>
-                  <div class="carousel-item">
-                    <img src="caro3.png" class="d-block w-100" alt="...">
-                    <div class="centered">
-                        <h1>Welcome to our website!</h1>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque rem perspiciatis illo praesentium? Ipsam illum dolor labore vitae at soluta laudantium saepe, esse nulla dolores dolorum fugiat doloremque corrupti. Alias.</p>
-                        <button class="read">Read More</button>
-                    </div>
-                  </div>
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Next</span>
-                </button>
-            </div>
-        </div>
-
-        <div class="row aboutus">
-            <div class="col video">
-                <iframe width="560" height="415" src="https://www.youtube.com/embed/jQyDlvv621Y?si=Wjjq7L65u6D2lVl4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
-            <div class="col about">
-                <h1>About Us</h1>
-                <p class="lobout">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui voluptate similique iure obcaecati alias excepturi tempora explicabo, labore provident consequuntur a veritatis officia vitae saepe illo blanditiis dolor. Blanditiis, delectus.</p>
-                <i class="fa fa-fingerprint bulb"></i> 
-                <div class="span1">
-                    <h3>Lorem</h3>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui voluptate similique iure obcaecati alias excepturi tempora explicabo.</p>
-                </div>
-                <i class="fa fa-gift gift"></i>
-                <div class="span2">
-                    <h3>Lorem</h3>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.  Qui voluptate similique iure obcaecati alias excepturi tempora explicabo.</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="row cellsrow cells">
-            <div class="cell1">
-                <p class="num">01</p>
-                <h3 class="head">Lorem Ipsum</h3>
-                <p class="para text-muted">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam eius unde exercitationem fugiat similique debitis!</p>
-            </div>
-            <div class="cell1">
-                <p class="num">02</p>
-                <h3 class="head">Lorem Ipsum</h3>
-                <p class="para text-muted">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam eius unde exercitationem fugiat similique debitis!</p>
-            </div>
-            <div class="cell1">
-                <p class="num">03</p>
-                <h3 class="head">Lorem Ipsum</h3>
-                <p class="para text-muted">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam eius unde exercitationem fugiat similique debitis!</p>
-            </div>
-        </div>
-        <div class="row cells">
-            <div class="cell2">
-                <p class="num">04</p>
-                <h3 class="head">Lorem Ipsum</h3>
-                <p class="para text-muted">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam eius unde exercitationem fugiat similique debitis!</p>
-            </div>
-            <div class="cell2">
-                <p class="num">05</p>
-                <h3 class="head">Lorem Ipsum</h3>
-                <p class="para text-muted">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam eius unde exercitationem fugiat similique debitis!</p>
-            </div>
-            <div class="cell2">
-                <p class="num">06</p>
-                <h3 class="head">Lorem Ipsum</h3>
-                <p class="para text-muted">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam eius unde exercitationem fugiat similique debitis!</p>
-            </div>
-        </div>
-
-        <div class="row counting">
-          <div class="col-md-3 counters">
-              <div class="timer" data-target="232">0</div>
-              <p class="clients">Happy Clients</p>
-          </div>
-          <div class="col-md-3 counters1">
-              <div class="timer" data-target="521">0</div>
-              <p class="clients1">Projects</p>
-          </div>
-          <div class="col-md-3 counters2">
-              <div class="timer" data-target="1463">0</div>
-              <p class="clients">Hours of Support</p>
-          </div>
-          <div class="col-md-3 counters3">
-              <div class="timer" data-target="100">0</div>
-              <p class="clients">Hard Workers</p>
-          </div>
-        </div>
-
-        <div class="row services">
-          <h1 class="text-center heading">Services</h1>
-          <div class="col-md-4 icons icons21">
-            <i class="far fa-comment-dots message1"></i>
-            <h5 class="lorem2">Lorem Ipsum</h5>
-            <span class="underline"></span>
-            <p class="para1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex rerum sapiente illum nam aspernatur quo, vero numquam.</p>
-          </div>
-          <div class="col-md-4 icons icons22">
-            <i class="fa fa-network-wired network"></i>
-            <h5 class="lorem1">Lorem Ipsum</h5>
-            <span class="underline1"></span>
-            <p class="para2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex rerum sapiente illum nam aspernatur quo, vero numquam.</p>
-          </div>
-          <div class="col-md-4 icons1 icons23">
-            <i class="fa fa-globe message"></i>
-            <h5 class="lorem">Lorem Ipsum</h5>
-            <span class="underline2"></span>
-            <p class="para3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex rerum sapiente illum nam aspernatur quo, vero numquam.</p>
-          </div>
-        </div>
-
-
-        <div class="row services">
-          <div class="col-md-4 icons icons24">
-            <i class="fa fa-tower-broadcast message1 message222"></i>
-            <h5 class="lorem2 lorem222">Lorem Ipsum</h5>
-            <span class="underline"></span>
-            <p class="para1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex rerum sapiente illum nam aspernatur quo, vero numquam.</p>
-          </div>
-          <div class="col-md-4 icons icons25">
-            <i class="fa fa-network-wired network network222"></i>
-            <h5 class="lorem1">Lorem Ipsum</h5>
-            <span class="underline1"></span>
-            <p class="para2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex rerum sapiente illum nam aspernatur quo, vero numquam.</p>
-          </div>
-          <div class="col-md-4 icons1 icons26">
-            <i class="fa fa-globe message message212"></i>
-            <h5 class="lorem">Lorem Ipsum</h5>
-            <span class="underline2"></span>
-            <p class="para3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex rerum sapiente illum nam aspernatur quo, vero numquam.</p>
-          </div>
-        </div>
-
-      <div class="row portfolio">
-        <h1 class="text-center heading1">Our Portfolio</h1>
-      </div>
-      <div class="row buttons">
-        <button class="filter-button all mx-2" data-filter="all">All</button>
-        <button class="filter-button app mx-2" data-filter="app">App</button>
-        <button class="filter-button cards mx-2" data-filter="card">Card</button>
-        <button class="filter-button web mx-2" data-filter="web">Web</button>
-      </div>
-      <div class="row projects1">
-        <div class="col pro1 app">
-          <img src="headphone.png" alt="" class="headphone">
-          <div class="description">
-            <h6 class="text-white fw-bold desc1">App1</h6>
-            <span>APP</span>
-            <button class="styling"> <a href=""> <i class="fa fa-plus"></i> </a> </button>
-            <button class="styling1"> <a href=""> <i class="fa fa-link"></i>  </a> </button>
-          </div>
-        </div>
-        <div class="col pro2 web">
-          <img src="watch11.png" alt="" class="watch">
-          <div class="description1">
-            <h6 class="text-white fw-bold desc2">Web 3</h6>
-            <span>WEB</span>
-            <button class="styling"> <a href=""> <i class="fa fa-plus"></i> </a> </button>
-            <button class="styling1"> <a href=""> <i class="fa fa-link"></i>  </a> </button>
-          </div>
-        </div>
-        <div class="col pro3 app">
-          <img src="glasses.png" alt="" class="glasses">
-          <div class="description2">
-            <h6 class="text-white fw-bold desc3">App 2</h6>
-            <span>APP</span>
-            <button class="styling"> <a href=""> <i class="fa fa-plus"></i> </a> </button>
-            <button class="styling1"> <a href=""> <i class="fa fa-link"></i>  </a> </button>
-          </div>
-          
-        </div>
-      </div>
-
-      <div class="row projects2">
-        <div class="col pro4 card">
-          <img src="flower.png" alt="" class="flower">
-          <div class="description3">
-            <h6 class="text-white fw-bold desc4">Card 2</h6>
-            <span>CARD</span>
-            <button class="styling"> <a href=""> <i class="fa fa-plus"></i> </a> </button>
-            <button class="styling1"> <a href=""> <i class="fa fa-link"></i>  </a> </button>
-          </div>
-        </div>
-        <div class="col pro5 web">
-          <img src="perfume.jpg" alt="" class="perfume">
-          <div class="description4">
-            <h6 class="text-white fw-bold desc5">Web 2</h6>
-            <span>WEB</span>
-            <button class="styling"> <a href=""> <i class="fa fa-plus"></i> </a> </button>
-            <button class="styling1"> <a href=""> <i class="fa fa-link"></i>  </a> </button>
-          </div>
-        </div>
-        <div class="col pro6 app">
-          <img src="oil.png" alt="" class="oil">
-          <div class="description5">
-            <h6 class="text-white fw-bold desc6">App 3</h6>
-            <span>APP</span>
-            <button class="styling"> <a href=""> <i class="fa fa-plus"></i> </a> </button>
-            <button class="styling1"> <a href=""> <i class="fa fa-link"></i>  </a> </button>
-          </div>
-        </div>
-      </div>
-
-
-      <div class="row projects3">
-        <div class="col pro7">
-          <img src="water11.jpg" alt="" class="water">
-          <div class="description6">
-            <h6 class="text-white fw-bold desc7">Card 1</h6>
-            <span>CARD</span>
-            <button class="styling"> <a href=""> <i class="fa fa-plus"></i> </a> </button>
-            <button class="styling1"> <a href=""> <i class="fa fa-link"></i>  </a> </button>
-          </div>
-        </div>
-        <div class="col pro8">
-          <img src="chair.jpg" alt="" class="chair">
-          <div class="description7">
-            <h6 class="text-white fw-bold desc8">Card 3</h6>
-            <span>CARD</span>
-            <button class="styling"> <a href=""> <i class="fa fa-plus"></i> </a> </button>
-            <button class="styling1"> <a href=""> <i class="fa fa-link"></i>  </a> </button>
-          </div>
-        </div>
-        <div class="col pro9">
-          <img src="steak.jpg.png" alt="" class="steak">
-          <div class="description8">
-            <h6 class="text-white fw-bold desc9">Web 3</h6>
-            <span>WEB</span>
-            <button class="styling"> <a href=""> <i class="fa fa-plus"></i> </a> </button>
-            <button class="styling1"> <a href=""> <i class="fa fa-link"></i>  </a> </button>
-          </div>
-        </div>
-      </div>
-
-
-      <div class="row team">
-        <h1 class="text-center heading2">Our Team</h1>
-        <p class="text-center">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae magni debit</p>
-        <div class="col per">
-          <img src="person1.jpg" alt="" class="person1">
-        </div>
-        <div class="col per">
-          <img src="person2.jpg" alt="" class="person2">
-        </div>
-        <div class="col per">
-          <img src="person3.jpg" alt="" class="person3">
-        </div>
-        <div class="col per">
-          <img src="person4.1.png" alt="" class="person4">
-        </div>
-      </div>
-
-      <div class="row boxes">
-        <div class="col-md-3 per1">
-          <div class="textbox">
-            <h5 class="text-center text-white">Walter White</h5>
-            <span class="underline11"></span>
-            <p class="text-center text-white">Chief Executive officer</p>
-            <div class="icon11">
-              <i class="fab fa-twitter twit"></i>
-              <i class="fab fa-facebook fb p-1"></i>
-              <i class="fab fa-instagram insta p-1"></i>
-              <i class="fab fa-linkedin in p-1"></i>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3 per2">
-          <div class="textbox1">
-            <h5 class="text-center text-white">Walter White</h5>
-            <span class="underline11"></span>
-            <p class="text-center text-white">Chief Executive officer</p>
-            <div class="icon11">
-              <i class="fab fa-twitter twit"></i>
-              <i class="fab fa-facebook fb p-1"></i>
-              <i class="fab fa-instagram insta p-1"></i>
-              <i class="fab fa-linkedin in p-1"></i>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3 per3">
-          <div class="textbox2">
-            <h5 class="text-center text-white">Walter White</h5>
-            <span class="underline11"></span>
-            <p class="text-center text-white">Chief Executive officer</p>
-            <div class="icon11">
-              <i class="fab fa-twitter twit"></i>
-              <i class="fab fa-facebook fb p-1"></i>
-              <i class="fab fa-instagram insta p-1"></i>
-              <i class="fab fa-linkedin in p-1"></i>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3 per4">
-          <div class="textbox3">
-            <h5 class="text-center text-white">Walter White</h5>
-            <span class="underline11"></span>
-            <p class="text-center text-white">Chief Executive officer</p>
-            <div class="icon11">
-              <i class="fab fa-twitter twit"></i>
-              <i class="fab fa-facebook fb p-1"></i>
-              <i class="fab fa-instagram insta p-1"></i>
-              <i class="fab fa-linkedin in p-1"></i>
-            </div>
-          </div>
-        </div>
-      </div>
-
-
-
-
-      <div class="row faq">
-        <h1 class="text-center heading3">Frequently Asked Questions</h1>
-
-
-        <div class="col frequent">
-          <h4>Lorem ipsum dolor sit amet consectetur?</h4>
-          <p class="text-muted">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto dolore incidunt error exercitationem natus atque dolor vero alias velit laudant.</p>
-          <div class="row">
-            <div class="col frequent">
-              <h4>Lorem ipsum dolor sit amet consectetur?</h4>
-              <p class="text-muted">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto dolore incidunt error exercitationem natus atque dolor vero alias velit laudant.</p>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col frequent">
-              <h4>Lorem ipsum dolor sit amet consectetur?</h4>
-              <p class="text-muted">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto dolore incidunt error exercitationem natus atque dolor vero alias velit laudant.</p>
-            </div>
-          </div>
-        </div>
-
-
-
-
-        <div class="col">
-          <div class="frequent">
+          <div class="col frequent">
             <h4>Lorem ipsum dolor sit amet consectetur?</h4>
             <p class="text-muted">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto dolore incidunt error exercitationem natus atque dolor vero alias velit laudant.</p>
           </div>
-          <div class="row">
-            <div class="col frequent">
-              <h4>Lorem ipsum dolor sit amet consectetur?</h4>
-              <p class="text-muted">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto dolore incidunt error exercitationem natus atque dolor vero alias velit laudant.</p>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col frequent">
-              <h4>Lorem ipsum dolor sit amet consectetur?</h4>
-              <p class="text-muted">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto dolore incidunt error exercitationem natus atque dolor vero alias velit laudant.</p>
-            </div>
+        </div>
+        <div class="row">
+          <div class="col frequent">
+            <h4>Lorem ipsum dolor sit amet consectetur?</h4>
+            <p class="text-muted">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto dolore incidunt error exercitationem natus atque dolor vero alias velit laudant.</p>
           </div>
         </div>
       </div>
 
 
-      <div class="row contact">
-        <h1 class="text-center heading4">Contact Us</h1>
-        <div class="col-md-5 address">
-          <div class="map">
-            <i class="fas fa-map-marker-alt mark"></i>
-          </div>
-          <div class="state">
-            <h5 class="city fw-bold">Our Address</h5>
-            <p class="text-center country">1234 Street Name, City, State, Country</p>
+
+
+      <div class="col">
+        <div class="frequent">
+          <h4>Lorem ipsum dolor sit amet consectetur?</h4>
+          <p class="text-muted">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto dolore incidunt error exercitationem natus atque dolor vero alias velit laudant.</p>
+        </div>
+        <div class="row">
+          <div class="col frequent">
+            <h4>Lorem ipsum dolor sit amet consectetur?</h4>
+            <p class="text-muted">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto dolore incidunt error exercitationem natus atque dolor vero alias velit laudant.</p>
           </div>
         </div>
-        <div class="col-md-3 mx-5 address1">
-          <div class="envelope">
-            <i class="fas fa-envelope enve"></i>
-          </div>
-          <div class="mail">
-            <h5 class="fw-bold">Email Us</h5>
-            <p>info@example.com
-              <br>
-              contact@gmail.com
-            </p>
-          </div>
-        </div>
-        <div class="col-md-3 address2">
-          <div class="call">
-            <i class="fa fa-phone-volume vol"></i>
-          </div>
-          <div class="phone">
-            <h5 class="fw-bold">Call Us</h5>
-            <p>11-222-333-444
-              <br>
-              777-8888-9999
-            </p>
+        <div class="row">
+          <div class="col frequent">
+            <h4>Lorem ipsum dolor sit amet consectetur?</h4>
+            <p class="text-muted">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto dolore incidunt error exercitationem natus atque dolor vero alias velit laudant.</p>
           </div>
         </div>
       </div>
-      <div class="row forms">
-        <form>
-          <div class="mb-3">
-            <input type="text" class="name" id="exampleInput1" placeholder="Name">
-            <input type="email" class="mailing mx-5" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
-          </div>
-          <div class="mb-3">
-            <input type="text" class="subject" id="exampleInput2" placeholder="Subject">
-          </div>
-          <div class="mb-3">
-            <textarea class="text" name="" id="" cols="154" rows="5" placeholder="Enter Your Message" required></textarea>
+    </div>
+
+
+    <div class="row contact">
+      <h1 class="text-center heading4">Contact Us</h1>
+      <div class="col-md-5 address">
+        <div class="map">
+          <i class="fas fa-map-marker-alt mark"></i>
         </div>
-          <button type="submit" class="btn btn-primary send">Send Message</button>
+        <div class="state">
+          <h5 class="city fw-bold">Our Address</h5>
+          <p class="text-center country">1234 Street Name, City, State, Country</p>
+        </div>
+      </div>
+      <div class="col-md-3 mx-5 address1">
+        <div class="envelope">
+          <i class="fas fa-envelope enve"></i>
+        </div>
+        <div class="mail">
+          <h5 class="fw-bold">Email Us</h5>
+          <p>info@example.com
+            <br>
+            contact@gmail.com
+          </p>
+        </div>
+      </div>
+      <div class="col-md-3 address2">
+        <div class="call">
+          <i class="fa fa-phone-volume vol"></i>
+        </div>
+        <div class="phone">
+          <h5 class="fw-bold">Call Us</h5>
+          <p>11-222-333-444
+            <br>
+            777-8888-9999
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="row forms">
+      <form>
+        <div class="mb-3">
+          <input type="text" class="name" id="exampleInput1" placeholder="Name">
+          <input type="email" class="mailing mx-5" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
+        </div>
+        <div class="mb-3">
+          <input type="text" class="subject" id="exampleInput2" placeholder="Subject">
+        </div>
+        <div class="mb-3">
+          <textarea class="text" name="" id="" cols="154" rows="5" placeholder="Enter Your Message" required></textarea>
+      </div>
+        <button type="submit" class="btn btn-primary send">Send Message</button>
+      </form>
+    </div>
+
+    <div class="row footer">
+      <div class="col quick">
+        <h2>Mamba</h2>
+        <p>A108 Adam Street
+          NY 535022, USA</p>
+        <h6>Phone: +1 5589 558 551 <br><br>
+          Email: info@example.com
+        </h6>
+        <div class="social">
+          <i class="fab fa-twitter twit1"></i>
+          <i class="fab fa-facebook-f fb1"></i>
+          <i class="fab fa-instagram insta1"></i>
+          <i class="fab fa-skype skype1"></i>
+          <i class="fab fa-linkedin-in in1"></i>
+        </div>
+      </div>
+      <div class="col links">
+        <h2>Useful Links</h2>
+        <div class="tags">
+          <a href="home" class="home"> Home</a>
+          <div class="my-4">
+            <a href="about" class="home">About</a>
+          </div>
+          <div class="my-4">
+            <a href="services" class="home">Services</a>
+          </div>
+          <div class="my-4">
+            <a href="terms" class="home">Terms of Service</a>
+          </div>
+          <div>
+            <a href="privacy" class="home">Privacy Policy</a>
+          </div>
+        </div>
+      </div>
+      <div class="col serve">
+        <h2>Our Services</h2>
+        <p>Web Design</p>
+        <p>Web Development</p>
+        <p>Product Management</p>
+        <p>Marketing</p>
+        <p>Graphic Design</p>
+      </div>
+      <div class="col letter">
+        <h2>Our Newsletter</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti architecto ipsam suscipit dolor.</p>
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" aria-label="subscribe">
+          <button class="btn btn-outline-success text-white" type="submit">Subscribe</button>
         </form>
       </div>
-
-      <div class="row footer">
-        <div class="col quick">
-          <h2>Mamba</h2>
-          <p>A108 Adam Street
-            NY 535022, USA</p>
-          <h6>Phone: +1 5589 558 551 <br><br>
-            Email: info@example.com
-          </h6>
-          <div class="social">
-            <i class="fab fa-twitter twit1"></i>
-            <i class="fab fa-facebook-f fb1"></i>
-            <i class="fab fa-instagram insta1"></i>
-            <i class="fab fa-skype skype1"></i>
-            <i class="fab fa-linkedin-in in1"></i>
-          </div>
-        </div>
-        <div class="col links">
-          <h2>Useful Links</h2>
-          <div class="tags">
-            <a href="home" class="home"> Home</a>
-            <div class="my-4">
-              <a href="about" class="home">About</a>
-            </div>
-            <div class="my-4">
-              <a href="services" class="home">Services</a>
-            </div>
-            <div class="my-4">
-              <a href="terms" class="home">Terms of Service</a>
-            </div>
-            <div>
-              <a href="privacy" class="home">Privacy Policy</a>
-            </div>
-          </div>
-        </div>
-        <div class="col serve">
-          <h2>Our Services</h2>
-          <p>Web Design</p>
-          <p>Web Development</p>
-          <p>Product Management</p>
-          <p>Marketing</p>
-          <p>Graphic Design</p>
-        </div>
-        <div class="col letter">
-          <h2>Our Newsletter</h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti architecto ipsam suscipit dolor.</p>
-          <form class="d-flex">
-            <input class="form-control me-2" type="search" aria-label="subscribe">
-            <button class="btn btn-outline-success text-white" type="submit">Subscribe</button>
-          </form>
-        </div>
-      </div>
-      <div class="row copyright">
-        <p class="text-center">@ Copyright Mamba. <strong>All rights reserved</strong> </p>
-        <span class="text-center">Designed by Natasha Asnani</span>
-      </div>
-    </div>  
+    </div>
+    <div class="row copyright">
+      <p class="text-center">@ Copyright Mamba. <strong>All rights reserved</strong> </p>
+      <span class="text-center">Designed by Natasha Asnani</span>
+    </div>
+  </div>  
 </body>
 </html>

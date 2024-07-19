@@ -116,13 +116,10 @@
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     padding-bottom: 100px;
     padding-top: 50px;
-    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
-    /* box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; */
 }
 
 .counters {
     margin-top: 50px;
-    /* border: 1px solid; */
     background-color: #fff;
     padding: 20px;
     width: 200px;
@@ -141,7 +138,6 @@
 }
 
 .counters1{
-    /* border: 1px solid; */
     padding: 20px;
     width: 200px;
     text-align: center;
@@ -150,7 +146,6 @@
     margin-top: 50px;
 }
 .counters2{
-    /* border: 1px solid; */
     padding: 20px;
     width: 200px;
     text-align: center;
@@ -159,7 +154,6 @@
     margin-top: 50px;
 }
 .counters3{
-    /* border: 1px solid; */
     padding: 20px;
     width: 200px;
     text-align: center;
@@ -169,14 +163,12 @@
 }
 .services{
     margin-top: 100px;
-    /* padding-left: 200px; */
 }
 .heading{
     color:#237390;
 }
 .icons{
     padding-left: 100px;
-    /* padding-right: 140px; */
     margin-top: 50px;
 }
 .icons1{
@@ -194,6 +186,7 @@
     color: #0f4680;
 }
 .message{
+    position: absolute;
     border-radius: 50%;
     font-size: 40px;
     padding: 30px;
@@ -204,7 +197,6 @@
 .network{
     position: absolute;
     left: 575px;
-    /* border: 1px solid; */
     border-radius: 50%;
     font-size: 40px;
     padding-top: 30px;
@@ -216,7 +208,7 @@
     color: #0f4680;
 }
 .lorem{
-    margin-top: 20px;
+    margin-top: 130px;
 }
 .lorem1{
     margin-top: 130px;
@@ -248,7 +240,6 @@
     margin-left: 30px;
 }
 .para1{
-    /* border: 1px solid; */
     text-align: center;
 }
 .para2{
@@ -264,13 +255,10 @@
 .sun{
     position: absolute;
     left: 575px;
-    /* border: 1px solid; */
     border-radius: 50%;
     font-size: 40px;
     padding: 30px;
     background-color: #fff;
-    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
-    /* color: #0f4680; */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     color: #0f4680;
 }
@@ -284,7 +272,6 @@
 .all{
     border: none;
     border-radius: 10px;
-    /* display: inline; */
     background-color: #4bb4da;
     color: white;
     width: 70px;
@@ -292,7 +279,6 @@
     padding-bottom: 10px;
 }
 .app{
-    /* display: inline; */
     border: none;
     border-radius: 10px;
     color: #237390;
@@ -301,7 +287,6 @@
     padding-bottom: 10px;
 }
 .cards{
-    /* display: inline; */
     border: none;
     border-radius: 10px;
     color: #237390;
@@ -310,7 +295,6 @@
     padding-bottom: 10px;
 }
 .web{
-    /* display: inline; */
     border: none;
     border-radius: 10px;
     color: #237390;
@@ -365,22 +349,22 @@
     font-size: 16px;
     left: 206px;
     top: 50%;
-    width: 388px; /* Match the width of the parent */
-    height: 211px; /* Match the height of the parent */
+    width: 388px;
+    height: 211px; 
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    pointer-events: none; /* Ensure that it does not interfere with hover */
+    pointer-events: none; 
 }
 
 .pro1:hover .description {
-    opacity: 1; /* Make it visible on hover */
-    pointer-events: auto; /* Enable pointer events when visible */
+    opacity: 1; 
+    pointer-events: auto; 
 }
  
 .desc1 {
-    margin-top: 0; /* Adjust margin as needed */
+    margin-top: 0; 
     font-size: x-large;
     color: rgb(255, 255, 255);
 }
@@ -388,7 +372,6 @@
 .styling{
     border-radius: 50%;
     border: none;
-    /* display: inline; */
     position: absolute;
     margin-top: 120px;
     left: 145px;
@@ -400,7 +383,6 @@
     position: absolute;
     border-radius: 50%;
     border: none;
-    /* display: inline; */
     left: 195px;
     margin-top: 120px;
     padding: 10px;
@@ -429,22 +411,22 @@
     font-size: 16px;
     left: 206px;
     top: 50%;
-    width: 388px; /* Match the width of the parent */
-    height: 211px; /* Match the height of the parent */
+    width: 388px; 
+    height: 211px; 
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    pointer-events: none; /* Ensure that it does not interfere with hover */
+    pointer-events: none; 
 }
 
 .pro2:hover .description1 {
-    opacity: 1; /* Make it visible on hover */
-    pointer-events: auto; /* Enable pointer events when visible */
+    opacity: 1; 
+    pointer-events: auto; 
 }
  
 .desc2 {
-    margin-top: 0; /* Adjust margin as needed */
+    margin-top: 0; 
     font-size: x-large;
     color: rgb(255, 255, 255);
 }
@@ -473,22 +455,22 @@
     font-size: 16px;
     left: 206px;
     top: 50%;
-    width: 388px; /* Match the width of the parent */
-    height: 211px; /* Match the height of the parent */
+    width: 388px; 
+    height: 211px; 
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    pointer-events: none; /* Ensure that it does not interfere with hover */
+    pointer-events: none;
 }
 
 .pro3:hover .description2 {
-    opacity: 1; /* Make it visible on hover */
-    pointer-events: auto; /* Enable pointer events when visible */
+    opacity: 1; 
+    pointer-events: auto; 
 }
  
 .desc3 {
-    margin-top: 0; /* Adjust margin as needed */
+    margin-top: 0; 
     font-size: x-large;
     color: rgb(255, 255, 255);
 }
@@ -513,22 +495,22 @@
     font-size: 16px;
     left: 206px;
     top: 50%;
-    width: 390px; /* Match the width of the parent */
-    height: 295px; /* Match the height of the parent */
+    width: 390px; 
+    height: 295px; 
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    pointer-events: none; /* Ensure that it does not interfere with hover */
+    pointer-events: none; 
 }
 
 .pro4:hover .description3 {
-    opacity: 1; /* Make it visible on hover */
-    pointer-events: auto; /* Enable pointer events when visible */
+    opacity: 1; 
+    pointer-events: auto; 
 }
  
 .desc4 {
-    margin-top: 0; /* Adjust margin as needed */
+    margin-top: 0; 
     font-size: x-large;
     color: rgb(255, 255, 255);
 }
@@ -554,22 +536,22 @@
     font-size: 16px;
     left: 206px;
     top: 50%;
-    width: 390px; /* Match the width of the parent */
-    height: 295px; /* Match the height of the parent */
+    width: 390px; 
+    height: 295px; 
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    pointer-events: none; /* Ensure that it does not interfere with hover */
+    pointer-events: none; 
 }
 
 .pro5:hover .description4 {
-    opacity: 1; /* Make it visible on hover */
-    pointer-events: auto; /* Enable pointer events when visible */
+    opacity: 1; 
+    pointer-events: auto; 
 }
  
 .desc5 {
-    margin-top: 0; /* Adjust margin as needed */
+    margin-top: 0;
     font-size: x-large;
     color: rgb(255, 255, 255);
 }
@@ -595,22 +577,22 @@
     font-size: 16px;
     left: 206px;
     top: 50%;
-    width: 390px; /* Match the width of the parent */
-    height: 295px; /* Match the height of the parent */
+    width: 390px; 
+    height: 295px; 
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    pointer-events: none; /* Ensure that it does not interfere with hover */
+    pointer-events: none; 
 }
 
 .pro6:hover .description5 {
-    opacity: 1; /* Make it visible on hover */
-    pointer-events: auto; /* Enable pointer events when visible */
+    opacity: 1; 
+    pointer-events: auto; 
 }
  
 .desc6 {
-    margin-top: 0; /* Adjust margin as needed */
+    margin-top: 0; 
     font-size: x-large;
     color: rgb(255, 255, 255);
 }
@@ -635,28 +617,30 @@
     font-size: 16px;
     left: 206px;
     top: 50%;
-    width: 390px; /* Match the width of the parent */
-    height: 211px; /* Match the height of the parent */
+    width: 390px; 
+    height: 211px; 
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    pointer-events: none; /* Ensure that it does not interfere with hover */
+    pointer-events: none; 
 }
 
 .pro7:hover .description6 {
-    opacity: 1; /* Make it visible on hover */
-    pointer-events: auto; /* Enable pointer events when visible */
+    opacity: 1; 
+    pointer-events: auto; 
 }
  
 .desc7 {
-    margin-top: 0; /* Adjust margin as needed */
+    margin-top: 0; 
     font-size: x-large;
     color: rgb(255, 255, 255);
 }
 
 .pro8 {
-    position: relative;
+        position: relative;
+        border: none;
+      outline: none;
 }
 .description7 {
     position: absolute;
@@ -669,27 +653,29 @@
     font-size: 16px;
     left: 206px;
     top: 50%;
-    width: 390px; /* Match the width of the parent */
-    height: 211px; /* Match the height of the parent */
+    width: 390px; 
+    height: 211px; 
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    pointer-events: none; /* Ensure that it does not interfere with hover */
+    pointer-events: none; 
 }
 
 .pro8:hover .description7 {
-    opacity: 1; /* Make it visible on hover */
-    pointer-events: auto; /* Enable pointer events when visible */
+    opacity: 1; 
+    pointer-events: auto; 
 }
  
 .desc8 {
-    margin-top: 0; /* Adjust margin as needed */
+    margin-top: 0; 
     font-size: x-large;
     color: rgb(255, 255, 255);
 }
 .pro9 {
     position: relative;
+    border: none;
+    outline: none;
 }
 .description8 {
     position: absolute;
@@ -702,22 +688,22 @@
     font-size: 16px;
     left: 206px;
     top: 50%;
-    width: 390px; /* Match the width of the parent */
-    height: 211px; /* Match the height of the parent */
+    width: 390px; 
+    height: 211px; 
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    pointer-events: none; /* Ensure that it does not interfere with hover */
+    pointer-events: none; 
 }
 
 .pro9:hover .description8 {
-    opacity: 1; /* Make it visible on hover */
-    pointer-events: auto; /* Enable pointer events when visible */
+    opacity: 1; 
+    pointer-events: auto; 
 }
  
 .desc9 {
-    margin-top: 0; /* Adjust margin as needed */
+    margin-top: 0;
     font-size: x-large;
     color: rgb(255, 255, 255);
 }
@@ -744,34 +730,22 @@
 .boxes{
     margin-top: -150px;
 }
-.projects1 .col, .projects2 .col {
-    display: none; 
-  }
-  .projects1 .col.show, .projects2 .col.show {
-    display: block; 
-  }
-  .pro1:hover, .pro2:hover, .pro3:hover, .pro4:hover, .pro5:hover, .pro6:hover {
+
+  .pro1:hover, .pro2:hover, .pro3:hover, .pro4:hover, .pro5:hover, .pro6:hover, .pro7:hover, .pro8:hover, .pro9:hover{
     background: none;
     border: none;
   }
-    
-
-/* 
-  .grid-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 10px;
-    justify-items: center;
+  .filterDiv {
+    background-color: transparent;
+    outline: none;
+    border: none;
+    text-align: center;
+    display: none; 
   }
   
-  .grid-item {
-    display: none; /* Hide all projects by default 
-    width: 100%;
+.show {
+    display: inline-block;
   }
-  
-  .grid-item.show {
-    display: block; /* Show only the filtered projects 
-  } */
   
   .heading2{
     color: #237390;
@@ -799,7 +773,6 @@
   .per{
     position: relative;
     padding-left: 18px;
-    /* transition: transform 0.5s ease; */
   }
   .per:hover .person1{
     transform: scale(1.08);
@@ -886,7 +859,6 @@
   }
   .heading3{
     color: #237390;
-    /* margin-top: 50px; */
   }
   .frequent{
     margin-top: 50px;
@@ -918,8 +890,6 @@
     color: #4daac6;
   }
   .address{
-    /* border: 1px solid; */
-    /* border-radius: 10px; */
     padding: 20px;
     text-align: center;
     margin-top: 50px;
@@ -934,8 +904,6 @@
     margin-top: 60px;
   }
   .address1{
-    /* border: 1px solid; */
-    /* border-radius: 10px; */
     padding: 20px;
     text-align: center;
     margin-top: 50px;
@@ -1083,10 +1051,11 @@ form{
     padding-top: 100px;
 }
 .name{
-    width: 550px;
+    width: 350px;
 }
 .mailing{
-    width: 550px;
+    position: absolute;
+    width: 350px;
 }
 .subject{
     width: 1155px;
@@ -1113,9 +1082,7 @@ form{
     iframe{
         width: 400px;
         height: 300px;
-        padding-right: 50px;
-        margin-left: 0px;
-        padding-left: 0px;
+        margin-left: -20px;
      }
      .video{
         padding-left: 0px;
@@ -1125,29 +1092,53 @@ form{
     }
    
     .message1{
-        left: 150px;
+        left: 130px;
     }
     .icons21{
-        padding-left: 60px;
+        padding-left: 40px;
         padding-right: 50px;
     }
     .network{
-        left: 150px;
+        left: 130px;
+    }
+    .message{
+        left: 130px;
+    }
+    .lorem{
+        margin-top: 130px;
+    }
+    .message222{
+        left: 120px;
+    }
+    .lorem222{
+        padding-left: 65px;
+    }
+    .underline222{
+        margin-left: 95px
+    }
+    .lorem33{
+        padding-left: 10px;
+    }
+    .underline33{
+        margin-left: 40px;
     }
     .icons22{
-        padding-left: 95px;
+        padding-left: 75px;
     }
     .icons23{
-        padding-left: 150px;
+        padding-left: 120px;
         padding-right: 0px;
     }
     .icons24{
-        padding-left: 70px;
+        padding-left: 40px;
         padding-right: 50px;
+    }
+    .icons25{
+        padding-left: 60px;
     }
 
     .icons26{
-        padding-left: 155px;
+        padding-left: 115px;
         padding-right: 0px;
     }
     .para2{
@@ -1156,15 +1147,24 @@ form{
     .para3{
         padding-right: 50px;
     }
+    .cell1{
+        padding-left: 10px;
+    }
+    .cell2{
+        padding-left: 10px;
+    }
     .buttons{
-        padding-left: 20px;
-        padding-right: 20px;
+        padding-left: 50px;
+        padding-right: 10px;
     }
     .projects1{
         width: 100px;
     }
     .projects2{
         width: 50px;
+    }
+    .projects3{
+        width: 30px;
     }
     .pro8{
         margin-top: 25px;
@@ -1173,76 +1173,87 @@ form{
         margin-top: 25px;
     }
     .headphone{
-        padding-right: 35px;
-        padding-left: 25px;
+        width: 390px;
+        padding-right: 40px;
+        padding-left: 0px;
     }
     .watch{
-        padding-right: 35px;
-        padding-left: 25px;
+        width: 390px;
+        padding-right: 40px;
+        padding-left: 0px;
     }
     .glasses{
-        padding-right: 35px;
-        padding-left: 25px;
+        width: 390px;
+        padding-right: 40px;
+        padding-left: 0px;
     }
     .flower{
-        padding-right: 35px;
-        padding-left: 25px;
+        width: 390px;
+        padding-right: 40px;
+        padding-left: 0px;
     }
     .perfume{
-        padding-right: 35px;
-        padding-left: 25px;
+        width: 390px;
+        padding-right: 40px;
+        padding-left: 0px;
     }
     .oil{
-        padding-right: 35px;
-        padding-left: 25px;
+        width: 390px;
+        padding-right: 40px;
+        padding-left: 0px;
     }
     .water{
-        padding-right: 35px;
-        padding-left: 25px;
+        width: 390px;
+        padding-right: 40px;
+        padding-left: 0px;
     }
     .chair{
-        padding-right: 35px;
-        padding-left: 25px;
+        width: 390px;
+        padding-right: 40px;
+        padding-left: 0px;
     }
     .steak{
-        padding-right: 35px;
-        padding-left: 25px;
+        width: 390px;
+        padding-right: 40px;
+        padding-left: 0px;
     }
     .description{
-        width: 340px;
-        left: 210px;
+        width: 350px;
+        left: 190px;
     }
     .description1{
-        width: 340px;
-        left: 210px;
+        width: 350px;
+        left: 190px;
+        height: 180px;
     }
     .description2{
-        width: 340px;
-        left: 210px;
+        width: 350px;
+        left: 190px;
     }
     .description3{
-        width: 340px;
-        left: 210px;
+        width: 350px;
+        left: 190px;
+        height: 235px;
     }
     .description4{
-        width: 340px;
-        left: 210px;
+        width: 350px;
+        left: 190px;
     }
     .description5{
-        width: 340px;
-        left: 210px;
+        width: 350px;
+        left: 190px;
     }
     .description6{
-        width: 335px;
-        left: 210px;
+        width: 345px;
+        left: 190px;
     }
     .description7{
-        width: 340px;
-        left: 210px;
+        width: 350px;
+        left: 190px;
     }
     .description8{
-        width: 340px;
-        left: 210px;
+        width: 350px;
+        left: 190px;
     }
 
     .styling{
@@ -1252,54 +1263,63 @@ form{
         left: 180px;
     }
     .textbox{
-        left: 85px;
-        margin-top: -1150px;
+        left: 70px;
+        margin-top: -1300px;
     }
 
     .textbox1{
-        left: 90px;
-        margin-top: -830px;
+        left: 70px;
+        margin-top: -930px;
     }
     .textbox2{
-        left: 90px;
-        margin-top: -510px;
+        left: 70px;
+        margin-top: -560px;
     }
     .textbox3{
-        left: 95px;
+        left: 70px;
         margin-top: -190px;
     }
     .per{
         margin-top: 50px;
-        padding-left: 45px;
+        padding-left: 5px;
+    }
+    .person1{
+        width: 310px;
+        height: 310px;
     }
     .person2{
+        width: 310px;
+        height: 310px;
         margin-top: 80px;
     }
     .person3{
+        width: 310px;
+        height: 310px;
         margin-top: 80px;
     }
     .person4{
+        width: 310px;
+        height: 310px;
         margin-top: 80px;
     }
     .boxes{
         width: 100px;
     }
     .map{
-        left: 175px;
+        left: 170px;
     }
     .envelope{
-        left: 175px;
+        left: 165px;
     }
     .call{
-        left: 180px;
+        left: 170px;
     }
     .address1{
         margin-left: 0px !important;
         margin-right: 0px !important;
     }
     .forms{
-        padding-left: 15px;
-        padding-right: 30px;
+        padding-left: 5px;
     }
     .name{
         width: 152px;
@@ -2005,7 +2025,6 @@ form{
 
 @media (min-width: 1200px){
     .centered{
-        /* left: 985px; */
         font-size: 13pt;
     }
     .buttons{
@@ -2021,13 +2040,13 @@ form{
         left: 1000px;
     }
     .map{
-        left: 260px;
+        left: 250px;
     }
     .envelope{
-        left: 710px;
+        left: 700px;
     }
     .call{
-        left: 1070px;
+        left: 1050px;
     }
     .name{
         width: 570px;
