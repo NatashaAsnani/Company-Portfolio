@@ -415,7 +415,6 @@
 }
    
 .watch{
-    /* height: 263px; */
     width: 390px;
 }
 
@@ -1118,6 +1117,9 @@ form{
         margin-left: 0px;
         padding-left: 0px;
      }
+     .video{
+        padding-left: 0px;
+     }
     .about{
         margin-top: 50px;
     }
@@ -1155,7 +1157,8 @@ form{
         padding-right: 50px;
     }
     .buttons{
-        padding-left: 40px;
+        padding-left: 20px;
+        padding-right: 20px;
     }
     .projects1{
         width: 100px;
@@ -1169,42 +1172,126 @@ form{
     .pro9{
         margin-top: 25px;
     }
+    .headphone{
+        padding-right: 25px;
+        padding-left: 25px;
+    }
+    .watch{
+        padding-right: 25px;
+        padding-left: 25px;
+    }
+    .glasses{
+        padding-right: 25px;
+        padding-left: 25px;
+    }
+    .flower{
+        padding-right: 25px;
+        padding-left: 25px;
+    }
+    .perfume{
+        padding-right: 25px;
+        padding-left: 25px;
+    }
+    .oil{
+        padding-right: 25px;
+        padding-left: 25px;
+    }
+    .water{
+        padding-right: 25px;
+        padding-left: 25px;
+    }
+    .chair{
+        padding-right: 25px;
+        padding-left: 25px;
+    }
+    .steak{
+        padding-right: 25px;
+        padding-left: 25px;
+    }
+    .description{
+        width: 340px;
+        left: 210px;
+    }
+    .description1{
+        width: 340px;
+        left: 210px;
+    }
+    .description2{
+        width: 340px;
+        left: 210px;
+    }
+    .description3{
+        width: 340px;
+        left: 210px;
+    }
+    .description4{
+        width: 340px;
+        left: 210px;
+    }
+    .description5{
+        width: 340px;
+        left: 210px;
+    }
+    .description6{
+        width: 335px;
+        left: 210px;
+    }
+    .description7{
+        width: 340px;
+        left: 210px;
+    }
+    .description8{
+        width: 340px;
+        left: 210px;
+    }
+
+    .styling{
+        left: 130px;
+    }
+    .styling1{
+        left: 180px;
+    }
     .textbox{
-        left: 95px;
-        margin-top: -1220px;
-        /* bottom: 5530px; */
+        left: 85px;
+        margin-top: -1150px;
     }
 
     .textbox1{
-        left: 95px;
-        /* top: 4000px; */
-        margin-top: -880px;
+        left: 90px;
+        margin-top: -830px;
     }
     .textbox2{
-        left: 95px;
-        /* bottom: 4710px; */
-        margin-top: -540px;
+        left: 90px;
+        margin-top: -510px;
     }
     .textbox3{
-        left: 100px;
-        /* bottom: 4300px; */
-        margin-top: -200px;
+        left: 95px;
+        margin-top: -190px;
     }
     .per{
-        margin-top: 150px;
-        padding-left: 50px;
+        margin-top: 50px;
+        padding-left: 45px;
+    }
+    .person2{
+        margin-top: 80px;
+    }
+    .person3{
+        margin-top: 80px;
+    }
+    .person4{
+        margin-top: 80px;
     }
     .boxes{
         width: 100px;
     }
     .map{
-        left: 180px;
+        left: 165px;
     }
     .envelope{
-        left: 175px;
+        left: 165px;
     }
     .call{
-        left: 175px;
+        left: 170px;
     }
     .address1{
         margin-left: 0px !important;
@@ -1241,671 +1328,717 @@ form{
     .serve{
         padding-left: 20px;
     }
-    /* .links a{
-        padding-left: 10px;
-    } */
 }
 
 @media (min-width: 576px) and (max-width: 767.98px){
     .centered{
-        position: absolute;
-        left: 290px;
+        font-size: 9pt;
     }
-    .natasha{
-        display: none;
+    .centered h1{
+        font-size: large;
     }
-    .about{
-        border: 1px solid;
+    .read{
+        margin-top: 3px;
+    }
+    iframe{
         width: 580px;
-        padding-left: 0px;
-        text-align: center;
-    }
-    .myself{
-        margin-top: 50px;
-        min-width: 700px;
-        padding-right: 180px;
-        text-align: justify;
-    }
-    .center1{
-        position: absolute;
-        margin-top: 280px;
-        left: 300px;
-    }
-    .linkedin{
-        padding-right: 200px;
+        height: 300px;
+        padding-right: 50px;
         margin-left: 0px;
-    }
-    .html{
-        margin-top: 200px;
-        display: block;
-        width: 600px;
-    }
-    .js{
-        display: block;
-    }
-    .bootstrap{
-        margin-top: 50px;
-        display: block;
-    }
-    .php{
-        display: block;
-    }
-    .dbms{
-        display: block;
-    }
-    .laravel{
-        margin-top: 50px;
-        display: block;
-    }
-    .sql{
-        margin-top: 50px;
-        display: block;
-    }
-    .services{
-        width: 600px;
-        padding-left: 30px;
-        padding-right: 30px;
-    }
-    .natasha1{
-       display: none;
-    }
-    .collaboration{
-        width: 600px;
-    }
-    .collaborate{
-        min-width: 600px;
-        padding-left: 30px;
-        padding-right: 30px;
-    }
-    .projects1{
-        margin-top: 800px;
-        width: 700px;
-        margin-left: 100px;
-    }
-    .icons{
-        width: 600px;
-        padding-left: 30px;
-        padding-right: 30px;
-    }
-    .linkedin1{
-        padding-left: 120px;
-    }
-    .github1{
-        padding-left: 120px;
-    }
-    .envelope1{
-        padding-left: 250px;
-    }
-    .projects1{
-        width: 390px;
-        padding-left: 0px;
-        margin-top: 100px;
-    }
-    .project1{
-        width: 400px;
         padding-left: 0px;
     }
-    .flight{
-        width: 390px;
-        height: 160px;
-    }
-    .description{
-        position: absolute;
-        margin-top: -81px;
-        left: 305px;
-        width: 390px;
-        height: 160px;
-    }
-    .desc1{
-        margin-top: 20px;
-    }
-    .portfolio{
-        position: absolute;
-        width: 390px;
-        height: 160px;
-        left: 115px;
-    }
-    .description1{
-        position: absolute;
-        margin-top: 80px;
-        left: 308px;
-        width: 390px;
-        height: 160px;
-    }
-    .desc2{
-        margin-top: 20px;
+     .about{
+        margin-top: 50px;
     }
 
-    .blog{
-       position: absolute;
-       margin-top: 150px;
-       width: 390px;
-       height: 160px;
-       left: 115px;
+    .cell1 {
+        padding: 20px;
+        padding-left: 20px;
+        padding-right: 20px;
     }
-    .description2{
+   
+    .cells {
+        padding-left: 20px;
+    }
+    .cell2 {
+        padding: 20px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .message1{
+        left: 50px;
+    }
+    .icons21{
+        padding-left: 0px;
+        padding-right: 50px;
+        width: 300px;
+    }
+    .lorem2{
+        padding-left: 50px;
+    }
+    .underline{
+        margin-left: 82px;
+    }
+    .network{
+        left: 90px;
+    }
+    .icons22{
         position: absolute;
-        margin-top: 230px;
-        left: 308px;
-        width: 390px;
-        height: 160px;
+        left: 300px;
+        margin-top: 95px;
+        padding-left: 40px ;
     }
-    .desc3{
+    .para2{
+        width: 320px;
+        padding-left: 20px;
+    }
+    .icons23{
+        padding-left: 60px;
+        padding-right: 0px;
+        width: 320px;
+    }
+    .para3{
+        padding-left: 30px;
+    }
+    .icons24{
+        position: absolute;
+        left: 300px;
+        margin-top: -398px;
+        padding-left: 35px;
+        width: 300px;
+    }
+    .message222{
+        left: 90px;
+    }
+
+    .icons25{
+        padding-left: 20px;
+        padding-right: 0px;
+        width: 320px;
+    }
+    .network222{
+        left: 72px;
+    }
+    .icons26{
+        position: absolute;
+        left: 370px;
+        padding-left: 30px;
+        width: 300px;
+    }
+    .message212{
+        margin-top: 8px;
+    }
+    .buttons{
+        padding-left: 120px;
+    }
+    .projects1{
+        width: 100px;
+        padding-left: 100px;
+    }
+    .projects2{
+        width: 100px;
+        padding-left: 100px;
+    }
+    .projects3{
+        width: 100px;
+        padding-left: 100px;
+    }
+    .pro8{
         margin-top: 20px;
     }
-    .aboutus{
+    .pro9{
+        margin-top: 20px;
+    }
+    .per{
         width: 500px;
-        height: 150px;
-        margin-top: 350px;
-        padding-left: 115px;
     }
-    .description3{
-        position: absolute;
-        margin-top: -75px;
-        left: 320px;
-        width: 385px;
-        height: 150px;
+    .person1{
+        width: 400px;
+        height: 300px;
+        padding-left: 100px;
+        margin-top: 50px;
     }
-    .desc4{
-        margin-top: 20px;
-    }
-    .contact{
+    .person2{
+        width: 400px;
+        height: 300px;
+        padding-left: 100px;
         margin-top: 100px;
-        width: 570px;
     }
-    .texts{
-        padding-left: 150px;
+    .person3{
+        width: 400px;
+        height: 300px;
+        padding-left: 100px;
+        margin-top: 100px;
     }
-   .contactform{
-    margin-top: 200px;
-    padding-left: 80px;
-   }
-   .message{
-    width: 425px;
-   }
-   .phone1{
-    left: 150px;
-   }
-   .call{
-    left: 170px;
-   }
-   .linkedin2{
-    left: 150px;
-   }
-   .in{
-    left: 170px;
-   }
-
-   .html{
-    display: block;
-    /* width: 1050px; */
-}
-.colone{
-    padding-right: 60px;
-}
-.coltwo{
-    padding-right: 60px;
-}
-.colthree{
-    padding-right: 60px;
-}
-.colfour{
-    padding-right: 60px;
-}
-.js{
-    display: block;
-    width: 600px;
-}
-.bootstrap{
-    padding-right: 60px;
-}
-.php{
-    display: block;
-    width: 600px;
-}
-.laravel{
-    padding-right: 60px;
-}
-.dbms{
-    display: block;
-    width: 600px;
-}
-.sql{
-    padding-right: 60px;
-}
-   .progress-bar{
-    width: 400px;
-}
-   .bar1{
-        width: 70%;
-}
-    .bar2{
-        width: 55%;
-}
-.bar3{
-    width: 90%;
-}
-.bar4{
-    width: 95%;
-}
+    .person4{
+        width: 400px;
+        height: 300px;
+        padding-left: 100px;
+        margin-top: 100px;
+    }
+    .boxes{
+        width: 100px;
+    }
+    .textbox{
+        left: 180px;
+        margin-top: -1210px;
+    }
+    .textbox1{
+        left: 180px;
+        margin-top: -880px;
+    }
+    .textbox2{
+        left: 180px;
+        margin-top: -550px;
+    }
+    .textbox3{
+        left: 180px;
+        margin-top: -220px;
+    }
+    .map{
+        left: 260px;
+    }
+    .address1{
+        margin-left: 0px !important;
+        margin-right: 0px !important;
+    }
+    .envelope{
+        left: 255px;
+    }
+    .call{
+        left: 255px;
+    }
+    .forms{
+        padding-left: 15px;
+        padding-right: 30px;
+    }
+    .name{
+        width: 240px;
+        padding-left: 0px;
+    }
+    .mailing{
+        position: absolute;
+        width: 240px;
+    }
+    .subject{
+        width: 530px;
+    }
+    .text{
+        width: 530px;
+    }
+    .footer{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .quick{
+        padding-left: 20px;
+    }
+    .links{
+        padding-left: 40px;
+        padding-right: 20px;
+    }
+    .serve{
+        padding-left: 20px;
+    } 
 }
 
 
 
 @media (min-width: 768px) and (max-width: 991.98px){
+
     .centered{
-        position: absolute;
-        left: 400px;
+        font-size: 13pt;
     }
-    .natasha{
-       display: none;
+    .centered h1{
+        font-size: xx-large;
     }
-    .about{
-        width: 800px;
+    .read{
+        margin-top: 3px;
     }
-    .para1{
-        margin-top: 50px;
-        position: absolute;
-        padding-left: 50px;
-        padding-right: 50px;
-        text-align: justify;
-    }
-    .html{
-        display: block;
-        width: 800px;
-        margin-top: 700px;
-    }
-    .center1{
-        position: absolute;
-        left:400px;
-        margin-top: 50px;
-    }
-    .colone{
-        padding-right: 50px;
-    }
-    .coltwo{
-        padding-right: 50px;
-    }
-    .colthree{
-        padding-right: 50px;
-    }
-    .colfour{
-        padding-right: 50px;
-    }
-    .js{
-        display: block;
-        width: 800px;
-    }
-    .bootstrap{
-        margin-top: 50px;
-        padding-right: 50px;
-    }
-    .php{
-        display: block;
-        width: 800px;
-    }
-    .laravel{
-        margin-top: 50px;
-        padding-right: 50px;
-    }
-    .dbms{
-        display: block;
-        width: 800px;
-    }
-    .sql{
-        margin-top: 50px;
-        padding-right: 50px;
-    }
-    .services{
-        width: 700px;
-        padding-left: 100px;
-    }
-    .serve{
-        padding-left: 140px;
-    }
-    .collaboration{
-       width: 800px;
-    }
-    .natasha1{
-        position: absolute;
-        left: 20px;
-        width: 250px;
-        height: 320px;
-        margin-top: 200px;
-    }
-    .collaborate{
-        min-width: 500px;
-        padding-right: 50px;
-        text-align: justify;
-    }
-    .icons{
-        width: 770px;
-    }
-    .linkedin1{
-        padding-left: 100px;
-        padding-right: 80px;
-    }
-    .github1{
-        padding-left: 100px;
-        padding-right: 80px;
-    }
-    .envelope1{
-        padding-left: 100px;
-        padding-right: 80px;
-    }
-    .projects1{
-        width: 800px;
-    }
-    .flight{
-        width: 700px;
-        margin-top: 30px;
-        padding-left: 50px;
-    }
-    .description{
-        position: absolute;
-        margin-top: -140px;
-        left: 388px;
-        width: 650px;
-        height: 280px;
-    }
-    .desc1{
-        margin-top: 100px;
-    }
-    .portfolio{
-        position: absolute;
-        width: 650px;
-        margin-top: 400px;
-        left: 65px;
-    }
-    .description1{
-        position: absolute;
-        margin-top: 540px;
-        left: 388px;
-        width: 649px;
-        height: 280px;
-    }
-    .desc2{
-        margin-top: 100px;
-    }
-    .blog{
-        width: 715px;
+    iframe{
+        width: 760px;
         height: 400px;
-        margin-top: 400px;
-        padding-left: 50px;
-    }
-    .description2{
-        position: absolute;
-        margin-top: -200px;
-        left: 392px;
-        width: 652px;
-        height: 400px;
-    }
-    .desc3{
-        margin-top: 150px;
-    }
-    .aboutus{
-        position: absolute;
-        left: 60px;
-        margin-top: 850px;
-        width: 670px;
-    }
-    .description3{
-        position: absolute;
-        margin-top: 990px;
-        left: 393px;
-        width: 660px;
-        height: 280px;
-    }
-    .desc4{
-        margin-top: 100px;
-    }
-    .contact{
-        width: 800px;
-        margin-top: 500px;
-    }
-    .texts{
-        padding-left: 20px;
-    }
-    .phone1{
-        left: 20px;
-    }
-    .call{
-        left: 40px;
-    }
-    .linkedin2{
-        left: 20px;
-    }
-    .in{
-        left: 40px;
-    }
-    .contactform{
+        padding-right: 50px;
         margin-left: 0px;
         padding-left: 0px;
     }
-    .email{
-        position: absolute;
-        left: 550px;
-        width: 160px;
+    .about{
+        margin-top: 50px;
     }
-    .input1{
-        width: 160px;
+
+    .cell1 {
+        padding: 20px;
+        padding-left: 20px;
+        padding-right: 20px;
     }
-    .input2{
-        width: 360px;
+   
+    .cells {
+        padding-left: 20px;
+    }
+    .cell2 {
+        padding: 20px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .counters1{
+        width: 170px;
+    }
+    .counters2{
+        width: 170px;
+    }
+    .counters3{
+        width: 170px;
+    }
+    .counters4{
+        width: 170px;
+    }
+   .message1{
+        left: 40px;
+    }
+    .icons21{
+        padding-left: 10px;
+        padding-right: 50px;
+    }
+    .lorem2{
+        padding-left: 30px;
+    }
+    .underline{
+        margin-left: 60px;
+    }
+    .para1{
+        width: 230px;
+    }
+    .network{
+        left: 330px;
+    }
+    .icons22{
+        margin-top: 50px;
+        padding-left: 20px;
+    }
+    .para2{
+        width: 300px;
+        padding-left: 20px;
     }
     .message{
-        width: 360px;
+        left: 420px;
     }
-    .send{
-        width: 360px;
+    .icons23{
+        padding-top: 10px;
+        padding-left: 70px;
     }
-    .progress-bar{
-        width: 400px;
+    .para3{
+        width: 340px;
+        padding-left: 30px;
     }
-    .bar1{
-        width: 70%;
+     .icons24{
+        padding-left: 10px;
+        width: 300px;
     }
-    .bar2{
-        width: 55%;
+    .message222{
+        left: 50px;
     }
-    .bar3{
-        width: 90%;
+    .icons25{
+        left: 0px;
+        padding-left: 0px;
+        margin-left: -20px;
+        padding-right: 0px;
+        width: 320px;
     }
-    .bar4{
-        width: 95%;
+    .network222{
+        left: 340px;
     }
-    .bar5{
-        width: 100%;
+    .icons26{
+        position: absolute;
+        left: 490px;
+        width: 300px;
+        padding-top: 5px;
     }
-    .bar6{
-        width: 99%;
+    .buttons{
+        padding-left: 210px;
     }
-    .bar7{
-        width: 98%;
+    .projects1{
+        width: 600px;
+    }
+    .description{
+        left: 205px;
+        width: 386px;
+    }
+    .pro2{
+        position: absolute;
+        left: 400px;
+    }
+    .pro3{
+        position: absolute;
+        padding-left: 200px;
+        padding-top: 250px;
+    }
+    .description2{
+        margin-top: 120px;
+        left: 395px;
+    }
+    .projects2{
+        margin-top: 300px;
+        width: 600px;
+    }
+    .pro5{
+        position: absolute;
+        left: 400px;
+        margin-top: -5px;
+    }
+    .perfume{
+        width: 350px;
+        height: 295px;
+    }
+    .description4{
+        left: 188px;
+        width: 350px;
+    }
+    .projects3{
+        margin-top: 400px;
+        width: 600px;
+    }
+    .pro6{
+        position: absolute;
+        padding-top: 330px;
+        left: 200px;
+    }
+    .description5{
+        margin-top: 160px;
+    }
+    .pro8{
+        position: absolute;
+        left: 400px;
+    }
+    .chair{
+        width: 350px;
+    }
+    .description7{
+        left: 200px;
+    }
+    .pro9{
+        position: absolute;
+        margin-top: 250px;
+        left: 200px;
+    }
+    .team{
+        margin-top: 400px;
+        padding-left: 70px;
+    }
+    .person3{
+        margin-top: 100px;
+    }
+    .person4{
+        margin-top: 100px;
+    }
+    .textbox{
+        left: 100px;
+        margin-top: -350px;
+    }
+    .textbox1{
+        left: 440px;
+        margin-top: -350px;
+    }
+    .textbox2{
+        left: 100px;
+        margin-top: 10px;
+    }
+    .textbox3{
+        left: 445px;
+        margin-top: -60px;
+    }
+    .contact{
+        padding-left: 10px;
+    }
+    .map{
+        left: 140px;
+    }
+    .envelope{
+        left: 420px;
+    }
+    .address2{
+        position: relative;
+        left: 570px;
+        margin-top: -197px;
+    }
+    .call{
+        left: 60px;
+    }
+    .forms{
+        padding-left: 15px;
+        padding-right: 30px;
+    }
+    .name{
+        width: 335px;
+        padding-left: 0px;
+    }
+    .mailing{
+        position: absolute;
+        width: 335px;
+    }
+    .subject{
+        width: 718px;
+    }
+    .text{
+        width: 718px;
+    }
+    .footer{
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+    .quick{
+        padding-left: 10px;
+    }
+    .links{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .serve{
+        padding-left: 10px;
     }
 }
 
 @media (min-width: 992px) and (max-width: 1199.98px){
-    .navbar-nav{
+     .centered{
+        font-size: 15pt;
+    }
+    .centered h1{
+        font-size: 30pt;
+    }
+    .read{
+        margin-top: 3px;
+        font-size: medium;
+    }
+    iframe{
+        padding-right: 30px;
+        margin-left: 0px;
         padding-left: 0px;
     }
-    .centered{
-        position: absolute;
-        left: 500px;
-    }
-    .about{
-        width: 1050px;
-    }
-    .natasha{
-       position: absolute;
-       left: 650px;
-    }
-    .para1{
-        margin-top: 50px;
-        text-align: justify;
-    }
-    .html{
-        width: 1050px;
-    }
-    .coltwo{
-        padding-right: 60px;
-    }
-    .js{
-        width: 1050px;
-    }
-    .bootstrap{
-        padding-right: 60px;
-    }
-    .php{
-        width: 1050px;
-    }
-    .laravel{
-        padding-right: 60px;
-    }
-    .dbms{
-        width: 1050px;
-    }
-    .sql{
-        padding-right: 60px;
-    }
-    .progress-bar{
-        width: 400px;
-    }
-    .bar1{
-        width: 70%;
-    }
-    .bar2{
-        width: 55%;
-    }
-    .bar3{
-        width: 90%;
-    }
-    .bar4{
-        width: 95%;
-    }
-    .services{
-        width: 1000px;
-    }
-    .collaboration{
-        width: 1050px;
-    }
-    .natasha1{
-        position: absolute;
-        left: 50px;
-        width: 350px;
-    }
-    .collaborate{
+    .video{
         padding-left: 0px;
-        padding-right: 80px;
-        text-align: justify;
+        margin-top: 80px;
+    }
+    .span1{
+        padding-top: 7px;
+    }
+    .span2{
+        padding-top: 7px;
     }
     .icons{
-        width: 1000px;
+        padding-left: 30px;
     }
-    .linkedin1{
-        padding-left: 150px;
-        padding-right: 50px;
+    .message1{
+        left: 120px;
     }
-    .github1{
-        padding-left: 150px;
-        padding-right: 50px;
+    .network{
+        left: 450px;
     }
-    .envelope1{
-        padding-left: 150px;
-        padding-right: 50px;
+    .icons22{
+        padding-left: 60px;
+        width: 400px;
     }
-    .projects1{
-        width: 1050px;
+    .icons1{
+        position: absolute;
+        left: 670px;
+        margin-top: 110px;
+        padding-right: 20px;
     }
-    .project1{
-        margin-top: 50px;
+    .icons23{
+        width: 420px;
     }
-    .flight{
-        width: 450px;
-        height: 200px;
+    .icons25{
+        padding-left: 60px;
+        width: 390px;
+    }
+    .icons26{
+        width: 420px;
+        margin-top: 65px;
+    }
+    .buttons{
+        padding-left: 330px;
+    }
+    .headphone {
+        width: 320px;
+    }
+    .watch{
+        width: 320px;
+        height: 215px;
+    }
+    .glasses{
+        width: 310px;
+        height: 215px;
+    }
+    .flower{
+        width: 320px;
+    }
+    .perfume{
+        width: 320px;
+        height: 237px;
+    }
+    .oil{
+        width: 320px;
+        height: 237px;
     }
     .description{
-        position: absolute;
-        margin-top: -100px;
-        left: 235px;
-        width: 450px;
-        height: 200px;
-    }
-    .desc1{
-        margin-top: 60px;
-    }
-    .portfolio{
-        position: absolute;
-        height: 200px;
-        width: 500px;
-        left: 480px;
-        padding-left: 0px;
+        left: 170px;
+        width: 320px;
     }
     .description1{
-        position: absolute;
-        margin-top: 100px;
-        left: 730px;
-        width: 500px;
-        height: 200px;
-    }
-    .desc2{
-        margin-top: 60px;
-    }
-    .blog{
-        height: 200px;
-        width: 450px;
+        left: 173px;
+        width: 320px;
     }
     .description2{
-        position: absolute;
-        margin-top: -100px;
-        left: 235px;
-        width: 440px;
-        height: 200px;
-    }
-    .desc3{
-        margin-top: 60px;
-    }
-    .aboutus{
-        position: absolute;
-        left: 480px;
-        height: 200px;
-        width: 500px;
+        left: 168px;
+        width: 310px;
     }
     .description3{
-        position: absolute;
-        margin-top: 100px;
-        left: 730px;
-        width: 500px;
-        height: 200px;
+        left: 170px;
+        width: 320px;
+        height: 240px;
+        margin-top: -2px;
     }
-    .desc4{
-        margin-top: 60px;
+    .description4{
+        left: 172px;
+        width: 320px;
+        height: 240px;
+        margin-top: -2px;
     }
-    .contact{
-        width: 1050px;
+    .description5{
+        left: 180px;
+        width: 330px;
+        height: 240px;
+        margin-top: -2px;
     }
-    .texts{
-        padding-left: 20px;
+    .water{
+        width: 320px;
+        height: 215px;
     }
-    .phone1{
-        left: 20px;
+    .chair{
+        width: 320px;
+        height: 215px;
+    }
+    .steak{
+        width: 320px;
+        height: 215px;
+    }
+    .pro8{
+        padding-left: 0px ;
+        padding-right: 330px;
+    }
+    .pro9{
+        left: 670px;
+        margin-top: -215px;
+    }
+    .description6{
+        left: 170px;
+        width: 320px;
+        height: 218px;
+        margin-top: -2px;
+    }
+    .description7{
+        left: 160px;
+        width: 315px;
+        height: 217px;
+        margin-top: -2px;
+    }
+    .description8{
+        left: 180px;
+        width: 335px;
+        height: 210px;
+        margin-top: -2px;
+    }
+    .styling{
+        left: 110px;
+    }
+    .styling1{
+        left: 160px;
+    }
+    .person4{
+        margin-top: 150px;
+        padding-left: 320px;
+        width: 580px;
+    }
+    .textbox{
+        left: 60px;
+        margin-top: -390px;
+    }
+    .textbox1{
+        left: 380px;
+        margin-top: -390px;
+    }
+    .textbox2{
+        left: 690px;
+        margin-top: -390px;
+    }
+    .textbox3{
+        left: 380px;
+        margin-top: 20px;
+    }
+    .map{
+        left: 200px;
+    }
+    .envelope{
+        left: 550px;
+    }
+    .address2{
+        position: relative;
+        left: 720px;
+        margin-top: -197px;
     }
     .call{
-        left: 40px;
+        left: 85px;
     }
-    .linkedin2{
-        left: 20px;
+    .name{
+        width: 430px;
+        padding-left: 0px;
     }
-    .in{
-        left: 42px;
+    .mailing{
+        position: absolute;
+        width: 430px;
     }
-    .message{
-        width: 425px;
+    .subject{
+        width: 908px;
+    }
+    .text{
+        width: 908px;
     }
 }
 
 @media (min-width: 1200px){
-    .center1{
-        left: 985px;
+    .centered{
+        /* left: 985px; */
+        font-size: 13pt;
+    }
+    .buttons{
+        padding-left: 480px;
+    }
+    .textbox1{
+        left: 375px;
+    }
+    .textbox2{
+        left: 680px;
+    }
+    .textbox3{
+        left: 1000px;
+    }
+    .map{
+        left: 260px;
+    }
+    .envelope{
+        left: 710px;
+    }
+    .call{
+        left: 1070px;
+    }
+    .name{
+        width: 570px;
+    }
+    .mailing{
+        width: 570px;
+    }
+    .subject{
+        width: 1195px;
+    }
+    .text{
+        width: 1195px;
     }
 }
