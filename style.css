@@ -6,6 +6,21 @@
     width: 100px;
     height: 20px;
 }
+
+.nav-link{
+    color: #237390 !important;
+    font-weight: bold;
+}
+
+.nav-link:hover{
+    background-color: #237390;
+    font-weight: bold;
+    border-top-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+    color: white !important;
+    padding: 10px;
+}
+
 /* Centered text */
 .centered {
     position: absolute;
@@ -161,107 +176,11 @@
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     margin-top: 50px;
 }
-.services{
-    margin-top: 100px;
-}
+
 .heading{
     color:#237390;
 }
-.icons{
-    padding-left: 100px;
-    margin-top: 50px;
-}
-.icons1{
-    padding-left: 100px;
-    margin-top: 50px;
-}
-.message1{
-    position: absolute;
-    left: 200px;
-    border-radius: 50%;
-    font-size: 40px;
-    padding: 30px;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    color: #0f4680;
-}
-.message{
-    position: absolute;
-    border-radius: 50%;
-    font-size: 40px;
-    padding: 30px;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    color: #0f4680;
-}
-.network{
-    position: absolute;
-    left: 575px;
-    border-radius: 50%;
-    font-size: 40px;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    padding-left: 25px;
-    padding-right: 25px;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    color: #0f4680;
-}
-.lorem{
-    margin-top: 130px;
-}
-.lorem1{
-    margin-top: 130px;
-    padding-left: 50px;
-}
-.lorem2{
-    margin-top: 130px;
-    padding-left: 80px;
-}
-.underline{
-    display: inline-block;
-    width: 60px;
-    height: 3px;
-    background-color: #007bff;
-    margin-left: 110px;
-}
-.underline1{
-    display: inline-block;
-    width: 60px;
-    height: 3px;
-    background-color: #007bff;
-    margin-left: 80px;
-}
-.underline2{
-    display: inline-block;
-    width: 60px;
-    height: 3px;
-    background-color: #007bff;
-    margin-left: 30px;
-}
-.para1{
-    text-align: center;
-}
-.para2{
-    text-align: center;
-    padding-right: 50px;
-    margin-left: -30px;
-}
-.para3{
-    text-align: center;
-    margin-left: -80px;
-    padding-right: 80px;
-}
-.sun{
-    position: absolute;
-    left: 575px;
-    border-radius: 50%;
-    font-size: 40px;
-    padding: 30px;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    color: #0f4680;
-}
+
 .portfolio{
     margin-top: 100px;
     
@@ -269,464 +188,92 @@
 .heading1{
     color:#237390;
 }
-.all{
-    border: none;
-    border-radius: 10px;
-    background-color: #4bb4da;
-    color: white;
-    width: 70px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
-.app{
-    border: none;
-    border-radius: 10px;
-    color: #237390;
-    width: 70px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
-.cards{
-    border: none;
-    border-radius: 10px;
-    color: #237390;
-    width: 70px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
-.web{
-    border: none;
-    border-radius: 10px;
-    color: #237390;
-    width: 70px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
-.app:hover{
-    background-color: #4bb4da;
-    color: white;
-}
-.cards:hover{
-    background-color: #4bb4da;
-    color: white;
-}
-.web:hover{
-    background-color: #4bb4da;
-    color: white;
-}
-.projects1{
-    margin-top: 100px;
-    display: flex;
-    flex-wrap: wrap;
-}
-.buttons{
-    margin-top: 50px;
+#myBtnContainer{
     padding-left: 450px;
 }
 
-.projects2{
-    margin-top: 50px;
-    display: flex;
-    flex-wrap: wrap;
-}
-.pro1 {
+/* Create three equal columns that floats next to each other */
+.col11 {
     position: relative;
+    display: none; 
+    padding: 8px;
+}
+
+/* Content */
+.content {
+    /* position: relative; */
+    background-color: white;
+    /* width: fit-content;
+    height: fit-content; */
+}
+
+/* Style the buttons */
+.btn {
     border: none;
     outline: none;
-}
-.image-container {
-    position: relative;
-}   
-.headphone {
-    width: 390px;
-    height: 215px;
-    transition: .5s ease;
-    backface-visibility: hidden;
-}
-  
-.description {
-    position: absolute;
-    transition: 0.5s ease;
-    opacity: 0;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    background-color: #10121077;
-    color: rgb(251, 247, 247);
-    font-size: 16px;
-    left: 206px;
-    top: 50%;
-    width: 388px;
-    height: 211px; 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    pointer-events: none; 
+    padding: 12px 16px;
+    background-color: white;
+    cursor: pointer;
 }
 
-.pro1:hover .description {
-    opacity: 1; 
-    pointer-events: auto; 
-}
- 
-.desc1 {
-    margin-top: 0; 
-    font-size: x-large;
-    color: rgb(255, 255, 255);
-}
- 
-.styling{
-    border-radius: 50%;
+.btn:hover {
+    background-color: #4daac6;
+    border-radius: 20px;
+    color: white;
+    outline: none;
     border: none;
-    position: absolute;
-    margin-top: 120px;
-    left: 145px;
-    padding: 10px;
-    padding-left: 15px;
-    padding-right: 15px;
 }
-.styling1{
-    position: absolute;
-    border-radius: 50%;
+
+.btn.active {
+    background-color: #4daac6;
+    border-radius: 20px;
+    color: white;
+    outline: none;
     border: none;
-    left: 195px;
-    margin-top: 120px;
-    padding: 10px;
-    padding-left: 15px;
-    padding-right: 15px;
 }
 
-.pro2 {
-    position: relative;
-    border: none;
-  outline: none;
-}
-   
-.watch{
-    width: 390px;
-}
-
-.description1 {
-    position: absolute;
-    transition: 0.5s ease;
-    opacity: 0;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    background-color: #10121077;
-    color: rgb(251, 247, 247);
-    font-size: 16px;
-    left: 206px;
-    top: 50%;
-    width: 388px; 
-    height: 211px; 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    pointer-events: none; 
-}
-
-.pro2:hover .description1 {
-    opacity: 1; 
-    pointer-events: auto; 
-}
- 
-.desc2 {
-    margin-top: 0; 
-    font-size: x-large;
-    color: rgb(255, 255, 255);
-}
- 
-
-.pro3 {
-    position: relative;
-    border: none;
-  outline: none;
-}
-   
-
-.glasses{
-    width: 390px;
-    height: 215px;
-}
-
-.description2 {
-    position: absolute;
-    transition: 0.5s ease;
-    opacity: 0;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    background-color: #10121077;
-    color: rgb(251, 247, 247);
-    font-size: 16px;
-    left: 206px;
-    top: 50%;
-    width: 388px; 
-    height: 211px; 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    pointer-events: none;
-}
-
-.pro3:hover .description2 {
-    opacity: 1; 
-    pointer-events: auto; 
-}
- 
-.desc3 {
-    margin-top: 0; 
-    font-size: x-large;
-    color: rgb(255, 255, 255);
-}
-
-.pro4 {
-    position: relative;
-    border: none;
-  outline: none;
-}
-   
- .flower{
-    width: 390px;
- }
- .description3 {
-    position: absolute;
-    transition: 0.5s ease;
-    opacity: 0;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    background-color: #10121077;
-    color: rgb(251, 247, 247);
-    font-size: 16px;
-    left: 206px;
-    top: 50%;
-    width: 390px; 
-    height: 295px; 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    pointer-events: none; 
-}
-
-.pro4:hover .description3 {
-    opacity: 1; 
-    pointer-events: auto; 
-}
- 
-.desc4 {
-    margin-top: 0; 
-    font-size: x-large;
-    color: rgb(255, 255, 255);
-}
- .perfume{
-    width: 390px;
-    height: 300px;
- }
-
- 
-.pro5 {
-    position: relative;
-    border: none;
-  outline: none;
-}
-.description4 {
-    position: absolute;
-    transition: 0.5s ease;
-    opacity: 0;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    background-color: #10121077;
-    color: rgb(251, 247, 247);
-    font-size: 16px;
-    left: 206px;
-    top: 50%;
-    width: 390px; 
-    height: 295px; 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    pointer-events: none; 
-}
-
-.pro5:hover .description4 {
-    opacity: 1; 
-    pointer-events: auto; 
-}
- 
-.desc5 {
-    margin-top: 0;
-    font-size: x-large;
-    color: rgb(255, 255, 255);
-}
-   
- .oil{
-    width: 390px;
-    height: 300px;
- }
-
- .pro6{
-    position: relative;
-    border: none;
-  outline: none;
- }
- .description5 {
-    position: absolute;
-    transition: 0.5s ease;
-    opacity: 0;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    background-color: #10121077;
-    color: rgb(251, 247, 247);
-    font-size: 16px;
-    left: 206px;
-    top: 50%;
-    width: 390px; 
-    height: 295px; 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    pointer-events: none; 
-}
-
-.pro6:hover .description5 {
-    opacity: 1; 
-    pointer-events: auto; 
-}
- 
-.desc6 {
-    margin-top: 0; 
-    font-size: x-large;
-    color: rgb(255, 255, 255);
-}
-
-.projects3{
-    margin-top: 50px;
-    display: flex;
-    flex-wrap: wrap;
-}
-.pro7{
-    position: relative;
+.btn.active:focus{
     border: none;
     outline: none;
+    box-shadow: none;
 }
 
-.description6 {
-    position: absolute;
-    transition: 0.5s ease;
-    opacity: 0;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    background-color: #10121077;
-    color: rgb(251, 247, 247);
-    font-size: 16px;
-    left: 206px;
-    top: 50%;
-    width: 390px; 
-    height: 211px; 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    pointer-events: none; 
+.headphone, .watch , .perfume, .flower, .glasses, .steak, .water, .oil, .chair{
+    height: 280px;
+    width: 320px;
 }
 
-.pro7:hover .description6 {
-    opacity: 1; 
-    pointer-events: auto; 
-}
- 
-.desc7 {
-    margin-top: 0; 
-    font-size: x-large;
-    color: rgb(255, 255, 255);
-}
-
-.pro8 {
-        position: relative;
-        border: none;
-      outline: none;
-}
-.description7 {
-    position: absolute;
-    transition: 0.5s ease;
-    opacity: 0;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    background-color: #10121077;
-    color: rgb(251, 247, 247);
-    font-size: 16px;
-    left: 206px;
-    top: 50%;
-    width: 390px; 
-    height: 211px; 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    pointer-events: none; 
-}
-
-.pro8:hover .description7 {
-    opacity: 1; 
-    pointer-events: auto; 
-}
- 
-.desc8 {
-    margin-top: 0; 
-    font-size: x-large;
-    color: rgb(255, 255, 255);
-}
-.pro9 {
+.content {
     position: relative;
-    border: none;
-    outline: none;
-}
-.description8 {
-    position: absolute;
+    background-color: white;
+    overflow: hidden;
     transition: 0.5s ease;
-    opacity: 0;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    background-color: #10121077;
-    color: rgb(251, 247, 247);
-    font-size: 16px;
-    left: 206px;
-    top: 50%;
-    width: 390px; 
-    height: 211px; 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    pointer-events: none; 
 }
 
-.pro9:hover .description8 {
-    opacity: 1; 
-    pointer-events: auto; 
+.content:hover img {
+    opacity: 0.2;
 }
- 
-.desc9 {
-    margin-top: 0;
-    font-size: x-large;
-    color: rgb(255, 255, 255);
+
+.middle {
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    pointer-events: none; /* Ensures the text doesn't interfere with the hover */
 }
-.water{
-    width: 390px;
-    height: 215px;
+
+.content:hover .middle {
+    opacity: 1;
 }
-.chair{
-    width: 390px;
-    height: 215px;
+
+.text {
+    color: black;
+    font-size: 16px;
 }
-.steak{
-    width: 390px;
-    height: 215px;
-}
+
 .team{
     margin-top: 100px;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
@@ -743,6 +290,7 @@
     background: none;
     border: none;
   }
+
   .filterDiv {
     background-color: transparent;
     outline: none;
@@ -750,17 +298,21 @@
     text-align: center;
     display: none; 
   }
+
 .show {
     display: inline-block;
   }
+
   .heading2{
     color: #237390;
   }
+
   .person2{
     width: 270px;
     height: 260px;
     transition: transform 0.5s ease;
   }
+
   .person4{
     width: 275px;
     height: 260px;
@@ -1096,72 +648,15 @@ form{
     .about{
         margin-top: 50px;
     }
-   
-    .message1{
-        left: 130px;
-    }
-    .icons21{
-        padding-left: 40px;
-        padding-right: 50px;
-    }
-    .network{
-        left: 130px;
-    }
-    .message{
-        left: 130px;
-    }
-    .lorem{
-        margin-top: 130px;
-    }
-    .message222{
-        left: 120px;
-    }
-    .lorem222{
-        padding-left: 65px;
-    }
-    .underline222{
-        margin-left: 95px
-    }
-    .lorem33{
-        padding-left: 10px;
-    }
-    .underline33{
-        margin-left: 40px;
-    }
-    .icons22{
-        padding-left: 75px;
-    }
-    .icons23{
-        padding-left: 120px;
-        padding-right: 0px;
-    }
-    .icons24{
-        padding-left: 40px;
-        padding-right: 50px;
-    }
-    .icons25{
-        padding-left: 60px;
-    }
 
-    .icons26{
-        padding-left: 115px;
-        padding-right: 0px;
-    }
-    .para2{
-        padding-right: 30px;
-    }
-    .para3{
-        padding-right: 50px;
-    }
     .cell1{
         padding-left: 10px;
     }
     .cell2{
         padding-left: 10px;
     }
-    .buttons{
-        padding-left: 50px;
-        padding-right: 10px;
+    #myBtnContainer{
+        padding-left: 80px;
     }
     .projects1{
         width: 100px;
@@ -1178,96 +673,7 @@ form{
     .pro9{
         margin-top: 25px;
     }
-    .headphone{
-        width: 390px;
-        padding-right: 40px;
-        padding-left: 0px;
-    }
-    .watch{
-        width: 390px;
-        padding-right: 40px;
-        padding-left: 0px;
-    }
-    .glasses{
-        width: 390px;
-        padding-right: 40px;
-        padding-left: 0px;
-    }
-    .flower{
-        width: 390px;
-        padding-right: 40px;
-        padding-left: 0px;
-    }
-    .perfume{
-        width: 390px;
-        padding-right: 40px;
-        padding-left: 0px;
-    }
-    .oil{
-        width: 390px;
-        padding-right: 40px;
-        padding-left: 0px;
-    }
-    .water{
-        width: 390px;
-        padding-right: 40px;
-        padding-left: 0px;
-    }
-    .chair{
-        width: 390px;
-        padding-right: 40px;
-        padding-left: 0px;
-    }
-    .steak{
-        width: 390px;
-        padding-right: 40px;
-        padding-left: 0px;
-    }
-    .description{
-        width: 350px;
-        left: 190px;
-    }
-    .description1{
-        width: 350px;
-        left: 190px;
-        height: 180px;
-    }
-    .description2{
-        width: 350px;
-        left: 190px;
-    }
-    .description3{
-        width: 350px;
-        left: 190px;
-        height: 235px;
-    }
-    .description4{
-        width: 350px;
-        left: 190px;
-    }
-    .description5{
-        width: 350px;
-        left: 190px;
-    }
-    .description6{
-        width: 345px;
-        left: 190px;
-    }
-    .description7{
-        width: 350px;
-        left: 190px;
-    }
-    .description8{
-        width: 350px;
-        left: 190px;
-    }
 
-    .styling{
-        left: 130px;
-    }
-    .styling1{
-        left: 180px;
-    }
     .textbox{
         left: 70px;
         margin-top: -1300px;
@@ -1391,93 +797,20 @@ form{
         padding-left: 20px;
         padding-right: 20px;
     }
-    .message1{
-        left: 50px;
-    }
-    .icons21{
-        padding-left: 0px;
-        padding-right: 50px;
-        width: 300px;
-    }
-    .lorem2{
-        padding-left: 50px;
-    }
-    .underline{
-        margin-left: 82px;
-    }
-    .network{
-        left: 90px;
-    }
-    .icons22{
-        position: absolute;
-        left: 300px;
-        margin-top: 95px;
-        padding-left: 40px ;
-    }
-    .para2{
-        width: 320px;
-        padding-left: 20px;
-    }
-    .icons23{
-        padding-left: 60px;
-        padding-right: 0px;
-        width: 320px;
-    }
-    .para3{
-        padding-left: 30px;
-    }
-    .icons24{
-        position: absolute;
-        left: 300px;
-        margin-top: -398px;
-        padding-left: 35px;
-        width: 300px;
-    }
-    .message222{
-        left: 90px;
+    
+    #myBtnContainer{
+        padding-left: 170px;
     }
 
-    .icons25{
-        padding-left: 20px;
-        padding-right: 0px;
-        width: 320px;
+    .headphone, .watch , .perfume, .flower, .glasses, .steak, .water, .oil, .chair{
+        height: 330px;
+        width: 550px;
     }
-    .network222{
-        left: 72px;
+
+    .middle{
+        left: 50%;
     }
-    .icons26{
-        position: absolute;
-        left: 370px;
-        padding-left: 30px;
-        width: 300px;
-    }
-    .message212{
-        margin-top: 8px;
-    }
-    .buttons{
-        padding-left: 120px;
-    }
-    .projects1{
-        width: 100px;
-        padding-left: 100px;
-    }
-    .projects2{
-        width: 100px;
-        padding-left: 100px;
-    }
-    .projects3{
-        width: 100px;
-        padding-left: 100px;
-    }
-    .pro8{
-        margin-top: 20px;
-    }
-    .pro9{
-        margin-top: 20px;
-    }
-    .per{
-        width: 500px;
-    }
+
     .person1{
         width: 400px;
         height: 300px;
@@ -1618,134 +951,24 @@ form{
     .counters4{
         width: 170px;
     }
-   .message1{
-        left: 40px;
-    }
-    .icons21{
-        padding-left: 10px;
-        padding-right: 50px;
-    }
-    .lorem2{
-        padding-left: 30px;
-    }
-    .underline{
-        margin-left: 60px;
-    }
-    .para1{
-        width: 230px;
-    }
-    .network{
-        left: 330px;
-    }
-    .icons22{
-        margin-top: 50px;
-        padding-left: 20px;
-    }
-    .para2{
-        width: 300px;
-        padding-left: 20px;
-    }
-    .message{
-        left: 420px;
-    }
-    .icons23{
-        padding-top: 10px;
-        padding-left: 70px;
-    }
-    .para3{
-        width: 340px;
-        padding-left: 30px;
-    }
-     .icons24{
-        padding-left: 10px;
-        width: 300px;
-    }
-    .message222{
-        left: 50px;
-    }
-    .icons25{
-        left: 0px;
-        padding-left: 0px;
-        margin-left: -20px;
-        padding-right: 0px;
-        width: 320px;
-    }
-    .network222{
-        left: 340px;
-    }
-    .icons26{
-        position: absolute;
-        left: 490px;
-        width: 300px;
-        padding-top: 5px;
-    }
-    .buttons{
-        padding-left: 210px;
+   
+    #myBtnContainer{
+        padding-left: 260px;
     }
     .projects1{
         width: 600px;
     }
-    .description{
-        left: 205px;
-        width: 386px;
-    }
-    .pro2{
-        position: absolute;
-        left: 400px;
-    }
-    .pro3{
-        position: absolute;
-        padding-left: 200px;
-        padding-top: 250px;
-    }
-    .description2{
-        margin-top: 120px;
-        left: 395px;
-    }
+   
     .projects2{
         margin-top: 300px;
         width: 600px;
     }
-    .pro5{
-        position: absolute;
-        left: 400px;
-        margin-top: -5px;
-    }
-    .perfume{
-        width: 350px;
-        height: 295px;
-    }
-    .description4{
-        left: 188px;
-        width: 350px;
-    }
+   
     .projects3{
         margin-top: 400px;
         width: 600px;
     }
-    .pro6{
-        position: absolute;
-        padding-top: 330px;
-        left: 200px;
-    }
-    .description5{
-        margin-top: 160px;
-    }
-    .pro8{
-        position: absolute;
-        left: 400px;
-    }
-    .chair{
-        width: 350px;
-    }
-    .description7{
-        left: 200px;
-    }
-    .pro9{
-        position: absolute;
-        margin-top: 250px;
-        left: 200px;
-    }
+   
     .team{
         margin-top: 400px;
         padding-left: 70px;
@@ -1849,135 +1072,11 @@ form{
     .span2{
         padding-top: 7px;
     }
-    .icons{
-        padding-left: 30px;
+   
+    #myBtnContainer{
+        padding-left: 360px;
     }
-    .message1{
-        left: 120px;
-    }
-    .network{
-        left: 450px;
-    }
-    .icons22{
-        padding-left: 60px;
-        width: 400px;
-    }
-    .icons1{
-        position: absolute;
-        left: 670px;
-        margin-top: 110px;
-        padding-right: 20px;
-    }
-    .icons23{
-        width: 420px;
-    }
-    .icons25{
-        padding-left: 60px;
-        width: 390px;
-    }
-    .icons26{
-        width: 420px;
-        margin-top: 65px;
-    }
-    .buttons{
-        padding-left: 330px;
-    }
-    .headphone {
-        width: 320px;
-    }
-    .watch{
-        width: 320px;
-        height: 215px;
-    }
-    .glasses{
-        width: 310px;
-        height: 215px;
-    }
-    .flower{
-        width: 320px;
-    }
-    .perfume{
-        width: 320px;
-        height: 237px;
-    }
-    .oil{
-        width: 320px;
-        height: 237px;
-    }
-    .description{
-        left: 170px;
-        width: 320px;
-    }
-    .description1{
-        left: 173px;
-        width: 320px;
-    }
-    .description2{
-        left: 168px;
-        width: 310px;
-    }
-    .description3{
-        left: 170px;
-        width: 320px;
-        height: 240px;
-        margin-top: -2px;
-    }
-    .description4{
-        left: 172px;
-        width: 320px;
-        height: 240px;
-        margin-top: -2px;
-    }
-    .description5{
-        left: 180px;
-        width: 330px;
-        height: 240px;
-        margin-top: -2px;
-    }
-    .water{
-        width: 320px;
-        height: 215px;
-    }
-    .chair{
-        width: 320px;
-        height: 215px;
-    }
-    .steak{
-        width: 320px;
-        height: 215px;
-    }
-    .pro8{
-        padding-left: 0px ;
-        padding-right: 330px;
-    }
-    .pro9{
-        left: 670px;
-        margin-top: -215px;
-    }
-    .description6{
-        left: 170px;
-        width: 320px;
-        height: 218px;
-        margin-top: -2px;
-    }
-    .description7{
-        left: 160px;
-        width: 315px;
-        height: 217px;
-        margin-top: -2px;
-    }
-    .description8{
-        left: 180px;
-        width: 335px;
-        height: 210px;
-        margin-top: -2px;
-    }
-    .styling{
-        left: 110px;
-    }
-    .styling1{
-        left: 160px;
-    }
+   
     .person4{
         margin-top: 150px;
         padding-left: 320px;
@@ -2033,8 +1132,8 @@ form{
     .centered{
         font-size: 13pt;
     }
-    .buttons{
-        padding-left: 480px;
+    #myBtnContainer{
+        padding-left: 510px;
     }
     .textbox1{
         left: 370px;

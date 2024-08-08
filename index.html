@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/webfont/1.6.28/webfontloader.js" integrity="sha512-v/wOVTkoU7mXEJC3hXnw9AA6v32qzpknvuUF6J2Lbkasxaxn2nYcl+HGB7fr/kChGfCqubVr1n2sq1UFu3Gh1w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous" defer></script>
 </head>
@@ -54,63 +53,53 @@
 
 
 <script>
-   // Function to filter elements based on the category
+  filterSelection("all")
   function filterSelection(c) {
     var x, i;
-    x = document.getElementsByClassName("filterDiv");
+    x = document.getElementsByClassName("column");
     if (c == "all") c = "";
-    // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
     for (i = 0; i < x.length; i++) {
       w3RemoveClass(x[i], "show");
       if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
     }
   }
 
-  // Function to add a class to an element
   function w3AddClass(element, name) {
     var i, arr1, arr2;
     arr1 = element.className.split(" ");
     arr2 = name.split(" ");
     for (i = 0; i < arr2.length; i++) {
-      if (arr1.indexOf(arr2[i]) == -1) {
-        element.className += " " + arr2[i];
-      }
+      if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
     }
   }
 
-  // Function to remove a class from an element
   function w3RemoveClass(element, name) {
     var i, arr1, arr2;
     arr1 = element.className.split(" ");
     arr2 = name.split(" ");
     for (i = 0; i < arr2.length; i++) {
       while (arr1.indexOf(arr2[i]) > -1) {
-        arr1.splice(arr1.indexOf(arr2[i]), 1);
+        arr1.splice(arr1.indexOf(arr2[i]), 1);     
       }
     }
     element.className = arr1.join(" ");
   }
-
-  // Function to handle button click events
+  // Add active class to the current button (highlight it)
   function setupButtons() {
-    var btnContainer = document.getElementById("myBtnContainer");
-    var btns = btnContainer.getElementsByClassName("btn");
-    for (var i = 0; i < btns.length; i++) {
-      btns[i].addEventListener("click", function() {
-        var current = document.getElementsByClassName("active");
-        if (current.length > 0) {
-          current[0].className = current[0].className.replace(" active", "");
-        }
-        this.className += " active";
-      });
-    }
+  var btnContainer = document.getElementById("myBtnContainer");
+  var btns = btnContainer.getElementsByClassName("btn");
+  for (var i = 0; i < btns.length; i++) {
+    btns[i].addEventListener("click", function(){
+      var current = document.getElementsByClassName("active");
+      current[0].className = current[0].className.replace(" active", "");
+      this.className += " active";
+    });
   }
-
-  // Show all projects initially
+  }
   window.onload = function() {
     filterSelection("all");
-    setupButtons();
-  };
+        setupButtons();
+      };
 </script>
 
   <div class="container-fluid">
@@ -137,17 +126,6 @@
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="#">Team</a>
-                </li>
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Dropdown
-                  </a>
-                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <li><a class="dropdown-item" href="#">Action</a></li>
-                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                    <li><hr class="dropdown-divider"></li>
-                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                  </ul>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="#">Contact</a>
@@ -275,150 +253,169 @@
         </div>
       </div>
 
-      <div class="row services">
+      <div class="row my-5">
         <h1 class="text-center heading">Services</h1>
-        <div class="col-md-4 icons icons21">
-          <i class="far fa-comment-dots message1"></i>
-          <h5 class="lorem2">Lorem Ipsum</h5>
-          <span class="underline"></span>
-          <p class="para1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex rerum sapiente illum nam aspernatur quo, vero numquam.</p>
+        <div class="col-md-4 text-center my-5">
+          <i class="far fa-comment-dots fs-1 d-block" style="color:#185d76;"></i>
+          <h5 class="my-3 d-inline-block" style="border-bottom: 3px solid #185d76;">Lorem Ipsum</h5>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex rerum sapiente illum nam aspernatur quo, vero numquam.</p>
         </div>
-        <div class="col-md-4 icons icons22">
-          <i class="fa fa-network-wired network"></i>
-          <h5 class="lorem1">Lorem Ipsum</h5>
-          <span class="underline1"></span>
-          <p class="para2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex rerum sapiente illum nam aspernatur quo, vero numquam.</p>
+        <div class="col-md-4 text-center my-5">
+          <i class="fa fa-network-wired fs-1 d-block" style="color:#185d76;"></i>
+          <h5 class="my-3 d-inline-block" style="border-bottom: 3px solid #185d76;">Lorem Ipsum</h5>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex rerum sapiente illum nam aspernatur quo, vero numquam.</p>
         </div>
-        <div class="col-md-4 icons1 icons23">
-          <i class="fa fa-globe message"></i>
-          <h5 class="lorem">Lorem Ipsum</h5>
-          <span class="underline2"></span>
-          <p class="para3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex rerum sapiente illum nam aspernatur quo, vero numquam.</p>
+        <div class="col-md-4 text-center my-5">
+          <i class="fa fa-globe fs-1 d-block" style="color:#185d76;"></i>
+          <h5 class="my-3 d-inline-block"  style="border-bottom: 3px solid #185d76;">Lorem Ipsum</h5>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex rerum sapiente illum nam aspernatur quo, vero numquam.</p>
         </div>
       </div>
 
 
-      <div class="row services">
-        <div class="col-md-4 icons icons24">
-          <i class="fa fa-tower-broadcast message1 message222"></i>
-          <h5 class="lorem2 lorem2222">Lorem Ipsum</h5>
-          <span class="underline"></span>
-          <p class="para1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex rerum sapiente illum nam aspernatur quo, vero numquam.</p>
+      <div class="row my-5">
+        <div class="col-md-4 text-center">
+          <i class="fa fa-tower-broadcast fs-1 d-block" style="color:#185d76;"></i>
+          <h5 class="my-3 d-inline-block" style="border-bottom: 3px solid #185d76;">Lorem Ipsum</h5>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex rerum sapiente illum nam aspernatur quo, vero numquam.</p>
         </div>
-        <div class="col-md-4 icons icons25">
-          <i class="fa fa-network-wired network network222"></i>
-          <h5 class="lorem1 lorem222">Lorem Ipsum</h5>
-          <span class="underline1 underline222"></span>
-          <p class="para2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex rerum sapiente illum nam aspernatur quo, vero numquam.</p>
+        <div class="col-md-4 text-center">
+          <i class="fa fa-network-wired fs-1 d-block" style="color:#185d76;"></i>
+          <h5 class="my-3 d-inline-block" style="border-bottom: 3px solid #185d76;">Lorem Ipsum</h5>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex rerum sapiente illum nam aspernatur quo, vero numquam.</p>
         </div>
-        <div class="col-md-4 icons1 icons26">
-          <i class="fa fa-globe message message212"></i>
-          <h5 class="lorem lorem33">Lorem Ipsum</h5>
-          <span class="underline2 underline33"></span>
-          <p class="para3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex rerum sapiente illum nam aspernatur quo, vero numquam.</p>
+        <div class="col-md-4 text-center">
+          <i class="fa fa-globe fs-1 d-block" style="color:#185d76;"></i>
+          <h5 class=" my-3 d-inline-block" style="border-bottom: 3px solid #185d76;">Lorem Ipsum</h5>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex rerum sapiente illum nam aspernatur quo, vero numquam.</p>
         </div>
       </div>
 
     <div class="row portfolio">
       <h1 class="text-center heading1">Our Portfolio</h1>
-    </div>
-    <div class="row buttons" id="myBtnContainer">
-      <button class="btn active all" onclick="filterSelection('all')"> All</button>
-      <button class="btn app" onclick="filterSelection('app')"> App</button>
-      <button class="btn cards" onclick="filterSelection('card')"> Card</button>
-      <button class="btn web" onclick="filterSelection('web')"> Web</button>
-    </div>
-
-    <div class="row projects1">
-      <div class="filterDiv col pro1 app all">
-        <div class="image-container">
-          <img src="headphone.png" alt="" class="headphone">
-          <div class="description">
-            <h6 class="text-white fw-bold desc1">App1</h6>
-            <span>APP</span>
-            <button class="styling"> <a href=""> <i class="fa fa-plus"></i> </a> </button>
-            <button class="styling1"> <a href=""> <i class="fa fa-link"></i>  </a> </button>
+      <div id="myBtnContainer">
+        <button class="btn active" onclick="filterSelection('all')"> ALL </button>
+        <button class="btn" onclick="filterSelection('app')"> APP</button>
+        <button class="btn" onclick="filterSelection('web')"> WEB</button>
+        <button class="btn" onclick="filterSelection('cards')"> CARDS</button>
+      </div>
+      <div class="row mx-4 gx-4 gy-4 after">
+        <div class="col-12 col-md-6 col-lg-4 column app col11">
+          <div class="content">
+            <img src="headphone.png" alt="Mountains" class="headphone">
+            <div class="middle">
+              <div class="text">
+                <h4>APP1</h4>
+                <p>Lorem ipsum</p>
+                <i class="fa fa-plus" style="font-size: 20pt;"></i>
+                <i class="fa fa-link d-inline mx-2" style="font-size: 20pt;"></i>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="filterDiv col pro2 web all">
-        <img src="watch11.png" alt="" class="watch">
-        <div class="description1">
-          <h6 class="text-white fw-bold desc2">Web 3</h6>
-          <span>WEB</span>
-          <button class="styling"> <a href=""> <i class="fa fa-plus"></i> </a> </button>
-          <button class="styling1"> <a href=""> <i class="fa fa-link"></i>  </a> </button>
+        <div class="col-12 col-md-6 col-lg-4 column cards col11">
+          <div class="content">
+            <img src="watch11.png" alt="Lights" class="watch">
+            <div class="middle">
+              <div class="text">
+                <h4>CARD1</h4>
+                <p>Lorem ipsum</p>
+                <i class="fa fa-plus" style="font-size: 20pt;"></i>
+                <i class="fa fa-link d-inline mx-2" style="font-size: 20pt;"></i>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="filterDiv col pro3 app all">
-        <img src="glasses.png" alt="" class="glasses">
-        <div class="description2">
-          <h6 class="text-white fw-bold desc3">App 2</h6>
-          <span>APP</span>
-          <button class="styling"> <a href=""> <i class="fa fa-plus"></i> </a> </button>
-          <button class="styling1"> <a href=""> <i class="fa fa-link"></i>  </a> </button>
+        <div class="col-12 col-md-6 col-lg-4 column web col11">
+          <div class="content">
+            <img src="glasses.png" alt="Nature" class="glasses">
+            <div class="middle">
+              <div class="text">
+                <h4>WEB1</h4>
+                <p>Lorem ipsum</p>
+                <i class="fa fa-plus" style="font-size: 20pt;"></i>
+                <i class="fa fa-link d-inline mx-2" style="font-size: 20pt;"></i>
+              </div>
+            </div>
+          </div>
         </div>
-        
-      </div>
-    </div>
-
-    <div class="row projects2">
-      <div class="filterDiv col pro4 card all">
-        <img src="flower.png" alt="" class="flower">
-        <div class="description3">
-          <h6 class="text-white fw-bold desc4">Card 2</h6>
-          <span>CARD</span>
-          <button class="styling"> <a href=""> <i class="fa fa-plus"></i> </a> </button>
-          <button class="styling1"> <a href=""> <i class="fa fa-link"></i>  </a> </button>
+        <div class="col-12 col-md-6 col-lg-4 column cards col11">
+          <div class="content">
+            <img src="flower.1.png" alt="Car" class="flower">
+            <div class="middle">
+              <div class="text">
+                <h4>CARD2</h4>
+                <p>Lorem ipsum</p>
+                <i class="fa fa-plus" style="font-size: 20pt;"></i>
+                <i class="fa fa-link d-inline mx-2" style="font-size: 20pt;"></i>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="filterDiv col pro5 web all">
-        <img src="perfume.jpg" alt="" class="perfume">
-        <div class="description4">
-          <h6 class="text-white fw-bold desc5">Web 2</h6>
-          <span>WEB</span>
-          <button class="styling"> <a href=""> <i class="fa fa-plus"></i> </a> </button>
-          <button class="styling1"> <a href=""> <i class="fa fa-link"></i>  </a> </button>
+        <div class="col-12 col-md-6 col-lg-4 column web col11">
+          <div class="content">
+            <img src="perfume.1.jpg" alt="Car" class="perfume">
+            <div class="middle">
+              <div class="text">
+                <h4>WEB2</h4>
+                <p>Lorem ipsum</p>
+                <i class="fa fa-plus" style="font-size: 20pt;"></i>
+                <i class="fa fa-link d-inline mx-2" style="font-size: 20pt;"></i>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="filterDiv col pro6 app all">
-        <img src="oil.png" alt="" class="oil">
-        <div class="description5">
-          <h6 class="text-white fw-bold desc6">App 3</h6>
-          <span>APP</span>
-          <button class="styling"> <a href=""> <i class="fa fa-plus"></i> </a> </button>
-          <button class="styling1"> <a href=""> <i class="fa fa-link"></i>  </a> </button>
+        <div class="col-12 col-md-6 col-lg-4 column app col11">
+          <div class="content">
+            <img src="oil.png" alt="Car" class="oil">
+            <div class="middle">
+              <div class="text">
+                <h4>APP2</h4>
+                <p>Lorem ipsum</p>
+                <i class="fa fa-plus" style="font-size: 20pt;"></i>
+                <i class="fa fa-link d-inline mx-2" style="font-size: 20pt;"></i>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-
-
-    <div class="row projects3">
-      <div class=" filterDiv col pro7 card all">
-        <img src="water11.jpg" alt="" class="water">
-        <div class="description6">
-          <h6 class="text-white fw-bold desc7">Card 1</h6>
-          <span>CARD</span>
-          <button class="styling"> <a href=""> <i class="fa fa-plus"></i> </a> </button>
-          <button class="styling1"> <a href=""> <i class="fa fa-link"></i>  </a> </button>
+        <div class="col-12 col-md-6 col-lg-4 column app col11">
+          <div class="content">
+            <img src="water.jpg" alt="Car" class="water">
+            <div class="middle">
+              <div class="text">
+                <h4>APP3</h4>
+                <p>Lorem ipsum</p>
+                <i class="fa fa-plus" style="font-size: 20pt;"></i>
+                <i class="fa fa-link d-inline mx-2" style="font-size: 20pt;"></i>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="filterDiv col pro8 card all">
-        <img src="chair.jpg" alt="" class="chair">
-        <div class="description7">
-          <h6 class="text-white fw-bold desc8">Card 3</h6>
-          <span>CARD</span>
-          <button class="styling"> <a href=""> <i class="fa fa-plus"></i> </a> </button>
-          <button class="styling1"> <a href=""> <i class="fa fa-link"></i>  </a> </button>
+        <div class="col-12 col-md-6 col-lg-4 column web col11">
+          <div class="content">
+            <img src="chair.jpg" alt="Car" class="chair">
+            <div class="middle">
+              <div class="text">
+                <h4>WEB3</h4>
+                <p>Lorem ipsum</p>
+                <i class="fa fa-plus" style="font-size: 20pt;"></i>
+                <i class="fa fa-link d-inline mx-2" style="font-size: 20pt;"></i>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="filterDiv col pro9 web all">
-        <img src="steak.jpg.png" alt="" class="steak">
-        <div class="description8">
-          <h6 class="text-white fw-bold desc9">Web 3</h6>
-          <span>WEB</span>
-          <button class="styling"> <a href=""> <i class="fa fa-plus"></i> </a> </button>
-          <button class="styling1"> <a href=""> <i class="fa fa-link"></i>  </a> </button>
+        <div class="col-12 col-md-6 col-lg-4 column cards col11">
+          <div class="content">
+            <img src="steak.jpg.png" alt="Car" class="steak">
+            <div class="middle">
+              <div class="text">
+                <h4>CARD3</h4>
+                <p>Lorem ipsum</p>
+                <i class="fa fa-plus" style="font-size: 20pt;"></i>
+                <i class="fa fa-link d-inline mx-2" style="font-size: 20pt;"></i>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -496,13 +493,8 @@
       </div>
     </div>
 
-
-
-
     <div class="row faq">
       <h1 class="text-center heading3">Frequently Asked Questions</h1>
-
-
       <div class="col frequent">
         <h4>Lorem ipsum dolor sit amet consectetur?</h4>
         <p class="text-muted">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto dolore incidunt error exercitationem natus atque dolor vero alias velit laudant.</p>
@@ -519,9 +511,6 @@
           </div>
         </div>
       </div>
-
-
-
 
       <div class="col">
         <div class="frequent">
@@ -542,7 +531,6 @@
         </div>
       </div>
     </div>
-
 
     <div class="row contact">
       <h1 class="text-center heading4">Contact Us</h1>
@@ -643,7 +631,7 @@
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti architecto ipsam suscipit dolor.</p>
         <form class="d-flex">
           <input class="form-control me-2" type="search" aria-label="subscribe">
-          <button class="btn btn-outline-success text-white" type="submit">Subscribe</button>
+          <button class="btn fw-bold" type="submit">Subscribe</button>
         </form>
       </div>
     </div>
